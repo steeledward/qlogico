@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Lógica Combinacional</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030916;18594200">
+	<META NAME="CHANGED" CONTENT="20030916;21500400">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6><FONT FACE="Thorndale">L&oacute;gica
+			Combinacional</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1><FONT FACE="Thorndale"><FONT SIZE=5>Contenido</FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm"><A HREF="#circuito combinacional"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Circuito
+combinacional</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#analisis combinacional"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">An&aacute;lisis
+combinacional</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sintesis y dise&ntilde;o combinacional"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">S&iacute;ntesis
+y dise&ntilde;o combinacional</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#implantacion con compuertas and or not"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Implantaci&oacute;n
+con compuertas AND, OR, NOT</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#implantacion con compuertas nand y nor"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Implantaci&oacute;n
+con compuertas NAND y NOR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sintesis con nand"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">S&iacute;ntesis
+con NAND</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sintesis con nor"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">S&iacute;ntesis
+con NOR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="circuito combinacional"></A><A NAME="1"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Circuito
+			combinacional</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Un
+circuito combinacional es aquel que est&aacute; formado por funciones
+l&oacute;gicas elementales ( AND, OR, NAND, NOR, etc. ), que tiene un
+determinado n&uacute;mero de entradas y salidas, dependiendo los
+valores que toman las salidas exclusivamente de los que toman las
+entradas en ese instante. Ejemplo de este tipo de circuitos son : los
+codificadores, decodificadores, multiplexores, demultiplexores,
+comparadores, generadores-detectores de paridad, etc.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="analisis combinacional"></A><A NAME="2"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>An&aacute;lisis
+			combinacional</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>En este punto se trata el
+an&aacute;lisis de circuitos combinacionales a nivel de puertas
+l&oacute;gicas. La estructura del circuito vendr&aacute; dada por su
+diagrama l&oacute;gico, cuyos constituyentes ser&aacute;n puertas
+l&oacute;gicas cuyo comportamiento lo determina el s&iacute;mbolo que
+lo representa</FONT></FONT></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Comic Sans MS"><FONT SIZE=2><IMG SRC="comb1.png" NAME="Imagen2" ALIGN=BOTTOM WIDTH=395 HEIGHT=248 BORDER=0></FONT></FONT></P>
+<P ALIGN=CENTER><FONT SIZE=2><FONT FACE="Comic Sans MS"><FONT SIZE=3><FONT FACE="Thorndale">ejemplo
+de un circuito combinac</FONT></FONT><STRONG><FONT SIZE=3><FONT FACE="Thorndale">inal</FONT></FONT></STRONG></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Un circuito
+combinacional se analiza determinando la salida de los elementos
+l&oacute;gicos que lo constituyen ( normalmente puertas l&oacute;gicas
+), partiendo de las variables de entrada y avanzando en el sentido de
+la se&ntilde;al hacia la salida.</FONT></FONT></P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Comic Sans MS"><FONT SIZE=2><IMG SRC="comb2.jpg" NAME="Imagen3" ALIGN=BOTTOM WIDTH=672 HEIGHT=298 BORDER=0></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="sintesis y dise&ntilde;o combinacional"></A><A NAME="3"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>S&iacute;ntesis
+			y dise&ntilde;o combinacional</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>A
+continuaci&oacute;n se intentan exponer las fases que se siguen en el
+proceso de s&iacute;ntesis y dise&ntilde;o de circuitos
+combinacionales :</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Definici&oacute;n
+	de la funci&oacute;n a realizar y especificaci&oacute;n de las
+	entradas y salidas. </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Tabla
+	de verdad. </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Ecuaciones
+	l&oacute;gicas de las salidas. </FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Simplificaci&oacute;n
+	de las ecuaciones. </FONT></FONT>
+	</P>
+	<LI><P><FONT FACE="Thorndale"><FONT SIZE=3>Realizaci&oacute;n o
+	implementaci&oacute;n de las ecuaciones simplificadas mediante
+	compuertas l&oacute;gicas. </FONT></FONT>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="implantacion con compuertas and or not"></A><A NAME="4"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Implantaci&oacute;n
+			con compuertas AND, OR, NOT</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>La
+implementaci&oacute;n con puertas AND, OR y NOT se realiza en el
+&uacute;ltimo paso del apartado anterior, sustituyendo las
+operaciones b&aacute;sicas que aparecen en la expresi&oacute;n l&oacute;gica
+de mi circuito digital, de suma l&oacute;gica, producto l&oacute;gico
+y complementaci&oacute;n. Estas operaciones se sustituyen por su
+representaci&oacute;n simb&oacute;lica obteniendo la realizaci&oacute;n
+del circuito mediante compuertas l&oacute;gicas.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Un
+ejemplo: Una vez realizado un dise&ntilde;o ha obtenido la siguiente
+funci&oacute;n </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="comb3.png" NAME="Imagen4" ALIGN=BOTTOM WIDTH=171 HEIGHT=40 BORDER=0></P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>siendo
+F la salida del circuito, y A,B,C las entradas.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT COLOR="#355e00"><FONT FACE="Comic Sans MS"><FONT SIZE=2><B><IMG SRC="comb4.png" NAME="Imagen5" ALIGN=BOTTOM WIDTH=397 HEIGHT=196 BORDER=0></B></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT COLOR="#355e00"><FONT FACE="Comic Sans MS"><FONT SIZE=2><B><IMG SRC="comb5.png" NAME="Imagen6" ALIGN=BOTTOM WIDTH=260 HEIGHT=122 BORDER=0></B></FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><SPAN STYLE="font-weight: medium"><FONT SIZE=3><FONT FACE="Thorndale">Ahora
+solamente queda interconexionar los t&eacute;rminos anteriores con la
+entrada B, mediante sumas ( OR ).Luego el circuito completo queda :</FONT></FONT></SPAN></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT COLOR="#355e00"><FONT FACE="Comic Sans MS"><FONT SIZE=2><B><IMG SRC="comb6.png" NAME="Imagen7" ALIGN=BOTTOM WIDTH=627 HEIGHT=249 BORDER=0></B></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=2><B>figura
+1</B></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="implantacion con compuertas nand y nor"></A><A NAME="5"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Implantaci&oacute;n
+			con compuertas NAND y NOR</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Para
+implementar circuitos digitales solamente con puertas NAND o NOR
+debemos conocer como implementar las operaciones b&aacute;sicas AND,
+OR y NOT, mediante el uso exclusivo de NAND o NOR.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="comb7.png" NAME="Imagen8" ALIGN=BOTTOM WIDTH=612 HEIGHT=120 BORDER=0></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>La
+compuerta NOT se puede obtener o es equivalente mediante NAND o NOR (
+se justifica con las tablas de verdad ), conectando ambas entradas.</FONT></FONT></P>
+<P STYLE="font-weight: medium; text-decoration: none"><A NAME="sintesis con nand"></A><A NAME="implantacion con nand"></A>
+<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">S&iacute;ntesis
+con NAND</FONT></FONT></FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Si
+quisi&eacute;ramos implementar el circuito de la figura 1, por
+ejemplo, con puertas NOR/NAND sustituir&iacute;amos cada puerta AND,
+OR y NOT por su equivalencia seg&uacute;n hemos visto anteriormente,
+eliminando posteriormente las situaciones redundantes. </FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="comb9.png" NAME="Imagen9" ALIGN=BOTTOM WIDTH=526 HEIGHT=301 BORDER=0></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="font-weight: medium; text-decoration: none"><A NAME="sintesis con nor"></A>
+<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">S&iacute;ntesis
+con NOR</FONT></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium"><FONT COLOR="#355e00"><FONT FACE="Thorndale"><IMG SRC="comb10.png" NAME="Imagen10" ALIGN=BOTTOM WIDTH=526 HEIGHT=301 BORDER=0></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Si
+quisi&eacute;ramos implementar el circuito de la figura 1, por
+ejemplo, con puertas NOR/NAND sustituir&iacute;amos cada puerta AND,
+OR y NOT por su equivalencia seg&uacute;n hemos visto anteriormente,
+eliminando posteriormente las situaciones redundantes.</FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<HR>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,1375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030917;225600">
+	<META NAME="CHANGED" CONTENT="20030917;1462700">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		TH P { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6><FONT FACE="Thorndale">Funciones
+			l&oacute;gicas</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1><FONT FACE="Thorndale"><FONT SIZE=5>Contenido</FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm"><A HREF="#introduccion"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Introducci&oacute;n</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#operadores logicos"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Operadores
+l&oacute;gicos</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#operador and"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Operador
+AND</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#operador or"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Operador
+OR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#operador not"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Operador
+NOT</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#tablas de verdad"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tablas
+de verdad</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#operadores fisicos"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Realizaci&oacute;n
+f&iacute;sica de los operadores l&oacute;gicos</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta and"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+AND </FONT></FONT></FONT></A>
+</P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta or"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+OR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta not"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+NOT</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta nand"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+NAND</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta nor"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+NOR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#compuerta exor"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Compuerta
+EXOR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#universal"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Universalidad
+de las compuertas NAND y NOR</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="introduccion"></A><A NAME="1"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Introducci&oacute;n</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale">La potencia de los sistemas digitales est&aacute;
+en la capacidad de sus componentes para tomar decisiones l&oacute;gicas.
+Para esto debemos poder representar las proposiciones l&oacute;gicas
+formuladas en lenguaje ordinario, con proposiciones simb&oacute;licas.
+Esto es asignarle un s&iacute;mbolo a la proposici&oacute;n.</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">En l&oacute;gica las
+proposiciones son verdaderas o falsas, y para expresar su valor de
+verdad utilizaremos el s&iacute;mbolo &quot;F&quot; o &quot;0 &quot;para
+falso y &quot;V&quot; o &quot;1&quot; para verdadero.</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Tambi&eacute;n
+representaremos las proposiciones en s&iacute; con ayuda de s&iacute;mbolos.
+Por ejemplo para simbolizar la proposici&oacute;n &quot; la puerta
+est&aacute; abierta&quot; podr&iacute;amos utilizar la letra P. </FONT>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Si realmente la puerta est&aacute;
+abierta podemos entonces decir que P =1. (o P=V)</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Para cada proposici&oacute;n
+positiva existe una proposici&oacute;n negativa as&iacute; podemos
+decir &quot;la puerta NO est&aacute; abierta&quot; que&nbsp;
+representaremos como P=0. (o P=F). Para simbolizar est&aacute;
+proposici&oacute;n podemos habla de P negada que representaremos como
+<IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/Pnegado.gif" NAME="Imagen2" ALT="Pnegado.gif (853 bytes)" ALIGN=BOTTOM WIDTH=11 HEIGHT=17 BORDER=0>.</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">&nbsp;Las proposiciones solas
+no tienen mucho sentido si no se relacionan con otras para tomar
+decisiones. As&iacute; podemos reunir varias proposiciones l&oacute;gicas
+para obtener una proposici&oacute;n compuesta. El valor de verdad de
+la proposici&oacute;n compuesta (verdadero o falso&nbsp;;&nbsp; 1 o
+0) depender&aacute; del valor de verdad de cada proposici&oacute;n
+componente y de la relaci&oacute;n entre estas. La relaci&oacute;n
+entre las proposiciones l&oacute;gicas componentes viene dada por el
+operador l&oacute;gico.</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Los operadores l&oacute;gicos
+primarios son el AND, el OR y el NOT</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="operadores logicos"></A><A NAME="2"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Operadores
+			l&oacute;gicos</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P><A NAME="operador and"></A><A NAME="22"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Operador
+l&oacute;gico AND ( conjunci&oacute;n l&oacute;gica )</FONT></FONT></FONT></P>
+<P><FONT FACE="Arial"><FONT FACE="Thorndale">Una proposici&oacute;n
+compuesta que utiliza este operador para relacionar sus proposiciones
+componente ser&aacute; verdad SI y SOLO SI&nbsp; las proposiciones
+componentes son verdaderas. Se simboliza con&nbsp; &quot;</FONT><STRONG><FONT FACE="Thorndale">&middot;</FONT></STRONG><FONT FACE="Thorndale">&quot;
+y al igual que en el &aacute;lgebra convencional puede suprimirse. (
+AB , A </FONT><STRONG><FONT FACE="Thorndale">&middot;</FONT></STRONG><FONT FACE="Thorndale">B).<BR></FONT></FONT><BR><BR>
+</P>
+<P><FONT FACE="Thorndale">Ejemplo:</FONT></P>
+<P ALIGN=JUSTIFY><EM><FONT FACE="Thorndale">&quot;Jos&eacute; ir&aacute;
+a la playa si el carro est&aacute; listo <FONT COLOR="#ff0000">Y </FONT>el
+d&iacute;a es soleado&quot;</FONT></EM></P>
+<P ALIGN=JUSTIFY><A NAME="operador or"></A><A NAME="221"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Operador
+l&oacute;gico OR ( disyunci&oacute;n l&oacute;gica )</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Una proposici&oacute;n
+compuesta que utiliza este operador ser&aacute; verdad si cualquiera
+de las proposiciones componentes es verdadera. Se simboliza con el
+signo &quot;+&quot;. (A+B).<BR></FONT><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Ejemplo:</FONT></P>
+<P ALIGN=JUSTIFY><EM><FONT FACE="Thorndale">&quot;La alarma sonar&aacute;
+si se abre la puerta <FONT COLOR="#ff0000">O</FONT> se golpea el
+carro&quot;</FONT></EM></P>
+<P ALIGN=JUSTIFY><A NAME="operador not"></A><A NAME="2211"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Operador
+l&oacute;gico NOT ( negaci&oacute;n )</FONT></FONT></FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Este operador se refiere a
+una sola proposici&oacute;n, negando su valor de verdad. Se
+representa con una barra sobre el s&iacute;mbolo que representa la
+proposici&oacute;n. ( 
+<IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/Pnegado.gif" NAME="Imagen3" ALT="Pnegado.gif (853 bytes)" ALIGN=BOTTOM WIDTH=11 HEIGHT=17 BORDER=0>
+)</FONT></P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Los operadores l&oacute;gicos
+NOT, AND y OR se conocen como operadores l&oacute;gicos b&aacute;sicos,
+puesto que cualquier funci&oacute;n puede expresarse como una
+combinaci&oacute;n de ellos.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="tablas de verdad"></A><A NAME="3"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Tablas
+			de verdad</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale">Para
+evaluar el valor de verdad de una proposici&oacute;n compuesta es muy
+&uacute;til usar una tabla de verdad. Esta es sencillamente una tabla
+que muestra el valor de la funci&oacute;n de salida (proposici&oacute;n
+compuesta) para cada combinaci&oacute;n de las variables de entrada
+(proposiciones componentes)</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale">En
+el siguiente&nbsp; circuito logico de dos entradas la tabla muestra
+todas las&nbsp; combinaciones de los posibles niveles logicos
+presentes en las entradas A y B y del correspondiente nivel de salida
+X</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Arial"><IMG SRC="func1.png" NAME="Imagen4" ALIGN=BOTTOM WIDTH=256 HEIGHT=92 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=178 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=55>
+		<COL WIDTH=57>
+		<COL WIDTH=52>
+		<TR>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>A</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=57>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>B</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=52>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>X</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=57>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=52>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=57>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=52>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=57>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=52>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=55>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=57>
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=52 SDVAL="0" SDNUM="2058;">
+				<P ALIGN=CENTER STYLE="border: 1px solid #000000; padding: 0.05cm">
+				<FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>A
+continuaci&oacute;n mostraremos las tablas de verdad para los
+operadores l&oacute;gicos b&aacute;sicos explicados anteriormente:</FONT></FONT></P>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 RULES=COLS>
+		<COL WIDTH=31*>
+		<COL WIDTH=6*>
+		<COL WIDTH=6*>
+		<COL WIDTH=12*>
+		<COL WIDTH=30*>
+		<COL WIDTH=31*>
+		<COL WIDTH=8*>
+		<COL WIDTH=6*>
+		<COL WIDTH=19*>
+		<COL WIDTH=20*>
+		<COL WIDTH=36*>
+		<COL WIDTH=7*>
+		<COL WIDTH=8*>
+		<COL WIDTH=36*>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD COLSPAN=5 WIDTH=33%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>&nbsp; </FONT></FONT>
+					</P>
+				</TD>
+				<TD COLSPAN=5 WIDTH=33%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>&nbsp; </FONT></FONT>
+					</P>
+				</TD>
+				<TD COLSPAN=4 WIDTH=34%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>&nbsp; </FONT></FONT>
+					</P>
+				</TD>
+			</TR>
+			<TR>
+				<TD ROWSPAN=6 WIDTH=12% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=3 WIDTH=9% HEIGHT=18 BGCOLOR="#8080ff">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">AND</FONT></STRONG></P>
+				</TD>
+				<TD ROWSPAN=6 WIDTH=12% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+				<TD ROWSPAN=6 WIDTH=12% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=3 WIDTH=13% BGCOLOR="#8080ff">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">OR</FONT></STRONG></P>
+				</TD>
+				<TD ROWSPAN=6 WIDTH=8% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+				<TD ROWSPAN=4 WIDTH=14% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=6% BGCOLOR="#8080ff">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">NOT</FONT></STRONG></P>
+				</TD>
+				<TD ROWSPAN=4 WIDTH=14% VALIGN=TOP>
+					<P><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR>
+				<TD WIDTH=2% HEIGHT=23 BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A</FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=2% BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">B</FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=5% BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A<FONT COLOR="#000000">&middot;B</FONT></FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=3% BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A</FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=2% BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">B</FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=8% BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A<FONT COLOR="#000000">+B</FONT></FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=3% VALIGN=BOTTOM BGCOLOR="#408080">
+					<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A</FONT></STRONG></P>
+				</TD>
+				<TD WIDTH=3% BGCOLOR="#408080">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/Amayunegaedogif.gif" NAME="Imagen5" ALT="Amayunegaedogif.gif (869 bytes)" ALIGN=BOTTOM WIDTH=14 HEIGHT=19 BORDER=0></FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR>
+				<TD WIDTH=2% HEIGHT=15>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=5% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=8% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR>
+				<TD WIDTH=2% HEIGHT=16>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=5% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=8% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=5% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=8% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD ROWSPAN=3 COLSPAN=4 WIDTH=34% VALIGN=TOP>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>&nbsp;</FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=5% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=3%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=2%>
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+				<TD WIDTH=8% BGCOLOR="#ffffb0">
+					<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD COLSPAN=5 WIDTH=33%>
+					<P><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=5 WIDTH=33%>
+					<P><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</CENTER>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="operadores fisicos"></A><A NAME="4"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Realizaci&oacute;n
+			f&iacute;sica de los operadores l&oacute;gicos</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale">Ahora es
+importante relacionar los operadores l&oacute;gicos con los circuitos
+electronicos, y para esto tenemos las compuertas l&oacute;gicas, que
+son el equivalente electronico de los operadores l&oacute;gicos. La
+compuerta l&oacute;gica es un dispositivo electronico que cuenta con
+un terminal de salida y varios terminales de entrada. El potencial de
+voltaje con respecto a tierra de cualquier terminal de entrada o
+salida, puede asumir solo uno de dos valores especificos. Uno de los
+voltajes representar&aacute; el verdadero y el otro voltaje el falso.</FONT></P>
+<P ALIGN=JUSTIFY STYLE="font-weight: medium"><A NAME="compuerta and"></A>
+<FONT FACE="Thorndale">Las compuertas l&oacute;gicas correspondiente
+a los operadores l&oacute;gicos basicos descritos anteriormente se
+representan de la siguiente forma:</FONT></P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=86*>
+		<COL WIDTH=110*>
+		<COL WIDTH=18*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=12*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=18*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				AND</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=7 WIDTH=34%>
+				<P ALIGN=CENTER><IMG SRC="func2.png" NAME="Imagen6" ALIGN=LEFT WIDTH=270 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=7 WIDTH=43%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT FACE="Thorndale"><FONT SIZE=2>La
+				compuerta AND es un dispositivo de dos o mas entradas y una
+				salida que cumple con la condici&oacute;n que la salida toma el
+				valor l&oacute;gico 1 si, y solo si todas las entradas valen 1.</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=5 WIDTH=23% VALIGN=TOP>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Thorndale"><FONT COLOR="#8080c0"><BR></FONT><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 WIDTH=7% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=2% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=2% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">B</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=5% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">A<FONT COLOR="#000000">&middot;B</FONT></FONT></STRONG></P>
+			</TD>
+			<TD ROWSPAN=5 WIDTH=7% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=5 WIDTH=23% VALIGN=TOP></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=86*>
+		<COL WIDTH=110*>
+		<COL WIDTH=20*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=7*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=20*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><A NAME="compuerta or"></A>
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				OR</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=7 WIDTH=34%>
+				<P><IMG SRC="func3.png" NAME="Imagen7" ALIGN=LEFT WIDTH=269 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=7 WIDTH=43%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT FACE="Thorndale"><FONT SIZE=2>La
+				compuerta OR es un dispositivo de dos o mas entradas y una salida
+				que cumple con la condici&oacute;n que la salida toma el valor
+				l&oacute;gico 1 si, y solo si una o mas&nbsp; entradas valen 1.</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=5 WIDTH=23%>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT><STRONG><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></STRONG></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 WIDTH=8% VALIGN=TOP></TD>
+			<TD WIDTH=2% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">A</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=2% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">B</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">A<FONT COLOR="#000000">+B</FONT></FONT></STRONG></P>
+			</TD>
+			<TD ROWSPAN=5 WIDTH=8% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=5 WIDTH=23%></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#8080c0"></TD>
+	</TR>
+</TABLE>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=86*>
+		<COL WIDTH=110*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=7*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=6 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><A NAME="compuerta not"></A>
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				NOT</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=6 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 WIDTH=34%>
+				<P><IMG SRC="func4.png" NAME="Imagen8" ALIGN=LEFT WIDTH=270 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=5 WIDTH=43%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT FACE="Thorndale"><FONT SIZE=2>La
+				compuerta NOT es un dispositivo de una&nbsp; entradas y una
+				salida que cumple con la condici&oacute;n que la salida toma el
+				valor l&oacute;gico negado de la entrada.</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=23%>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT><STRONG><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></STRONG></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=3 WIDTH=9% VALIGN=TOP></TD>
+			<TD WIDTH=2% HEIGHT=24 VALIGN=BOTTOM BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">A</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=3% VALIGN=TOP BGCOLOR="#408080">
+				<P ALIGN=CENTER><IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/Amayunegaedogif.gif" NAME="Imagen9" ALT="Amayunegaedogif.gif (869 bytes)" ALIGN=BOTTOM WIDTH=14 HEIGHT=19 BORDER=0></P>
+			</TD>
+			<TD ROWSPAN=3 WIDTH=9% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=15>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=16>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=4 WIDTH=23%></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=6 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium; text-decoration: none"><FONT FACE="Thorndale"><FONT SIZE=3>Las
+tres compuertas basicas enumeradas anteriormente pueden combinarse
+para realizar funciones logicas mas complejas. A continuaci&oacute;n
+se muestran otras tres funciones importantes que se pueden realizar
+con compuertas, indicando su simbolo, su funci&oacute;n y su tabla de
+verdad.</FONT></FONT></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR="#ff0000">
+	<TR>
+		<TD WIDTH=100% HEIGHT=2 BGCOLOR="#ff0000"></TD>
+	</TR>
+</TABLE>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% HEIGHT=14 BGCOLOR="#ffffff"></TD>
+	</TR>
+</TABLE>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% HEIGHT=1 BGCOLOR="#8080c0"></TD>
+	</TR>
+</TABLE>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=80*>
+		<COL WIDTH=6*>
+		<COL WIDTH=108*>
+		<COL WIDTH=2*>
+		<COL WIDTH=16*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=1*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=5*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=1*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=5*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=1*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=12*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=1*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=17*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><A NAME="compuerta nand"></A>
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				NAND</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=7 WIDTH=31%>
+				<P><IMG SRC="func8.png" NAME="Imagen10" ALIGN=LEFT WIDTH=270 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=7 COLSPAN=2 WIDTH=45%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT SIZE=2><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT></FONT><FONT FACE="Thorndale"><FONT COLOR="#000000">La
+				compuerta NAND es un dispositivo de dos o mas entradas y una
+				salida que equivale a una compuerta AND seguida de negador (NOT
+				AND = NAND). Cumple con la condici&oacute;n que la salida toma el
+				valor l&oacute;gico 0 si, y solo si todas las&nbsp; entradas
+				valen 1. Si no la salida toma el valor 1. Se representa como una
+				compuerta NAND seguida de un circulo que denota la negaci&oacute;n</FONT></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=10 WIDTH=24% VALIGN=TOP>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT><STRONG><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></STRONG></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 COLSPAN=2 WIDTH=7% VALIGN=TOP></TD>
+			<TD COLSPAN=2 WIDTH=2% HEIGHT=25 VALIGN=BOTTOM BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">A</FONT></STRONG></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2% VALIGN=BOTTOM BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial">B</FONT></STRONG></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% VALIGN=TOP BGCOLOR="#408080">
+				<P ALIGN=CENTER><IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/ABneg.gif" NAME="Imagen11" ALT="ABneg.gif (916 bytes)" ALIGN=BOTTOM WIDTH=36 HEIGHT=19 BORDER=0></P>
+			</TD>
+			<TD ROWSPAN=5 COLSPAN=2 WIDTH=7% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=10 WIDTH=24% VALIGN=TOP></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><A NAME="compuerta nor"></A>
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				NOR</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=7 COLSPAN=2 WIDTH=34%>
+				<P><IMG SRC="func9.png" NAME="Imagen12" ALIGN=LEFT WIDTH=270 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=7 COLSPAN=2 WIDTH=43%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT SIZE=2><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT></FONT><FONT FACE="Thorndale"><FONT COLOR="#000000">La
+				compuerta NOR es un dispositivo de dos o mas entradas y una
+				salida&nbsp; equivalente &nbsp; a una compuerta OR seguida de un
+				negador (NOT OR = NOR). Cumple con la condici&oacute;n que la
+				salida toma el valor l&oacute;gico 1 si, y solo si todas las
+				entradas valen 0. Para las otras combinaciones la salida es 0.Se
+				representa como una compuerta OR seguida de un circulo que denota
+				la negaci&oacute;n</FONT></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=9 WIDTH=23% VALIGN=TOP>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT><STRONG><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></STRONG></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 COLSPAN=2 WIDTH=7% VALIGN=TOP></TD>
+			<TD COLSPAN=2 WIDTH=2% HEIGHT=26 VALIGN=BOTTOM BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial"><FONT COLOR="#000000">A</FONT></FONT></STRONG></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2% VALIGN=BOTTOM BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial"><FONT COLOR="#000000">B</FONT></FONT></STRONG></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% VALIGN=TOP BGCOLOR="#408080">
+				<P ALIGN=CENTER><FONT COLOR="#38608e"><IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/AmBneg.gif" NAME="Imagen13" ALT="AmBneg.gif (923 bytes)" ALIGN=BOTTOM WIDTH=36 HEIGHT=19 BORDER=0></FONT></P>
+			</TD>
+			<TD ROWSPAN=5 WIDTH=7% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=5% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=9 WIDTH=23% VALIGN=TOP></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=13 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=4 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=86*>
+		<COL WIDTH=110*>
+		<COL WIDTH=16*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=6*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=15*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=16*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP>
+				<P STYLE="font-weight: medium; text-decoration: none"><A NAME="compuerta exor"></A>
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Compuerta
+				EXOR</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=7 WIDTH=34%>
+				<P><IMG SRC="func10.png" NAME="Imagen14" ALIGN=LEFT WIDTH=269 HEIGHT=75 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=7 WIDTH=43%>
+				<P ALIGN=JUSTIFY STYLE="border: none; padding: 0cm"><FONT FACE="Thrndale"><FONT SIZE=2>La
+				compuerta EXOR (or exclusivo) es un dispositivo de dos&nbsp;
+				entradas y una salida que cumple con la condici&oacute;n que la
+				salida toma el valor l&oacute;gico 1 si, y solo si las&nbsp;
+				entradas son diferentes.</FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=5 WIDTH=23% VALIGN=TOP>
+				<P ALIGN=CENTER STYLE="border: none; padding: 0cm"><STRONG><FONT FACE="Arial"><FONT COLOR="#8080c0"><BR></FONT><STRONG><SPAN STYLE="text-decoration: none"><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+				de verdad</FONT></FONT></FONT></SPAN></STRONG></FONT></STRONG></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=5 WIDTH=6% VALIGN=TOP></TD>
+			<TD WIDTH=2% HEIGHT=24 BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial"><FONT COLOR="#000000">A</FONT></FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=2% BGCOLOR="#408080">
+				<P ALIGN=CENTER><STRONG><FONT FACE="Arial"><FONT COLOR="#000000">B</FONT></FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=6% VALIGN=TOP BGCOLOR="#408080">
+				<P ALIGN=CENTER><IMG SRC="http://medusa.unimet.edu.ve/sistemas/bpis03/images/ABex.gif" NAME="Imagen15" ALT="ABex.gif (938 bytes)" ALIGN=BOTTOM WIDTH=43 HEIGHT=19 BORDER=0></P>
+			</TD>
+			<TD ROWSPAN=5 WIDTH=6% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=15>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=15>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=15>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=2% HEIGHT=16>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=2%>
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6% BGCOLOR="#ffffb0">
+				<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=5 WIDTH=23% VALIGN=TOP></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% BGCOLOR="#8080c0"></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=7 WIDTH=100% VALIGN=TOP></TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% HEIGHT=10 BGCOLOR="#ffffff">
+			<P>&nbsp;</P>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="universal"></A><A NAME="5"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Universalidad
+			de las compuertas NAND y NOR</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale">Esta compuertas
+se dicen que son &quot;universales&quot; puesto que con cada una de
+las dos familias podemos realizar todas las funciones l&oacute;gicas.
+</FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="font-weight: medium"><FONT FACE="Thorndale">En
+la tabla a continuacu&oacute;n se muestran los operadores l&oacute;gicos
+en funcion de solo compuertas NOR y solo compuertas NAND.</FONT></P>
+<CENTER>
+	<TABLE WIDTH=795 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 RULES=ROWS>
+		<COL WIDTH=195>
+		<COL WIDTH=269>
+		<COL WIDTH=307>
+		<TR BGCOLOR="#eeeede" VALIGN=TOP>
+			<TH WIDTH=195>
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TH>
+			<TD WIDTH=269>
+				<P ALIGN=CENTER STYLE="font-weight: medium; text-decoration: none">
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=3>NAND </FONT></FONT></FONT>
+				</P>
+			</TD>
+			<TD WIDTH=307>
+				<P ALIGN=CENTER STYLE="font-weight: medium; text-decoration: none">
+				<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=3>NOR</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0">
+			<TD WIDTH=195 HEIGHT=116>
+				<P ALIGN=CENTER><IMG SRC="func11.png" NAME="Imagen16" ALIGN=LEFT WIDTH=161 HEIGHT=73 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=269>
+				<P ALIGN=CENTER><IMG SRC="func12.png" NAME="Imagen17" ALIGN=LEFT WIDTH=267 HEIGHT=53 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=307>
+				<UL>
+					<P ALIGN=CENTER><IMG SRC="func13.png" NAME="Imagen18" ALIGN=LEFT WIDTH=270 HEIGHT=55 BORDER=0><BR CLEAR=LEFT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#d0d0d0">
+			<TD WIDTH=195 HEIGHT=116>
+				<P ALIGN=CENTER><IMG SRC="func14.png" NAME="Imagen19" ALIGN=LEFT WIDTH=161 HEIGHT=73 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=269>
+				<P ALIGN=CENTER><IMG SRC="func15.png" NAME="Imagen20" ALIGN=LEFT WIDTH=267 HEIGHT=85 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=307>
+				<UL>
+					<P ALIGN=CENTER><IMG SRC="func16.png" NAME="Imagen21" ALIGN=LEFT WIDTH=270 HEIGHT=111 BORDER=0><BR CLEAR=LEFT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0">
+			<TD WIDTH=195 HEIGHT=115>
+				<P ALIGN=CENTER><IMG SRC="func17.png" NAME="Imagen22" ALIGN=LEFT WIDTH=161 HEIGHT=73 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=269>
+				<P ALIGN=CENTER><IMG SRC="func18.png" NAME="Imagen23" ALIGN=LEFT WIDTH=267 HEIGHT=116 BORDER=0><BR CLEAR=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=307>
+				<UL>
+					<P ALIGN=CENTER><IMG SRC="func19.png" NAME="Imagen24" ALIGN=LEFT WIDTH=270 HEIGHT=82 BORDER=0><BR CLEAR=LEFT></P>
+				</UL>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<H2 ALIGN=JUSTIFY STYLE="margin-top: 0cm; margin-bottom: 0cm"><BR>
+</H2>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT SIZE=1><FONT FACE="Arial">NOTA: La conversi&oacute;n
+posiblemente se entienda mejor cuando estudiemos el manejo de
+funciones con <A HREF="algebra-tutorial.html"><SPAN STYLE="text-decoration: none"><FONT SIZE=2><FONT FACE="Thorndale"><FONT COLOR="#355e00">&Aacute;lgebra
+Booleana</FONT></FONT></FONT></SPAN></A></FONT></FONT></P>
+<HR>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

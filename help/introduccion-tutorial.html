@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Introducci&oacute;n circuitos digitales</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030916;23163900">
+	<META NAME="CHANGED" CONTENT="20030917;132200">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6><FONT FACE="Thorndale">Introducci&oacute;n</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1><FONT FACE="Thorndale"><FONT SIZE=5>Contenido</FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sistema digital"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+digital</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#representacion analogica"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Representaci&oacute;n
+anal&oacute;gica</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#representacion digital"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Representaci&oacute;n
+digital</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#ejemplo representacion digital"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Ejemplo
+representaci&oacute;n digital</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#ventajas"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Ventajas
+sistemas digitales</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#limitaciones"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Limitaciones
+sistemas digitales</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sistema combinatorio"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+combinatorio</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#sistema secuencial"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+secuencial</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="sistema digital"></A><A NAME="1"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			digital</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Es
+cualquier sistema que genera, procesa, transmite y almacena
+informaci&oacute;n, siendo esta representada por magnitudes&nbsp;
+f&iacute;sicas discretas.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Para entender mejor este
+concepto consideremos que en la ciencia, tecnolog&iacute;a, negocios
+y en muchisimos otros campos estamos constantemente manejando
+cantidades. Las cantidades son medidas, monitoreadas grabadas,
+manipuladas aritm&eacute;ticamente, observadas, o de alguna otra
+manera utilizadas en la mayor&iacute;a de los sistemas f&iacute;sicos.
+Es importante, cuando tratamos con diferentes cantidades que seamos
+capaces de representar sus valores con precisi&oacute;n y de manera
+eficiente. <BR></FONT><BR><BR>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Existen dos formas de
+representar el valor num&eacute;rico de las cantidades: La forma
+ANALOGICA &nbsp; y la forma DIGITAL</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="representacion analogica"></A><A NAME="2"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Representaci&oacute;n
+			anal&oacute;gica</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">En la
+representaci&oacute;n anal&oacute;gica una cantidad es representa por
+un voltaje, corriente, o el movimiento de un metro que es
+proporcional al valor de la cantidad. Las cantidades anal&oacute;gicas
+como las enumeradas anteriormente poseen una caracter&iacute;stica
+importante: var&iacute;an sobre un rango de valores continuos.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="representacion digital"></A><A NAME="3"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Representaci&oacute;n
+			digital</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">En la
+representaci&oacute;n digital las cantidades no se representan por
+cantidades proporcionales sino por&nbsp; s&iacute;mbolos llamados
+d&iacute;gitos. </FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Como
+ejemplo podemos mencionar el reloj digital, el cual representa las
+horas, los minutos y los segundos en forma de d&iacute;gitos
+decimales. Como sabemos el tiempo cambia continuamente, en cambio el
+reloj digital cambia por pasos de uno por segundo (o por de minuto).
+En otras palabras, esta representaci&oacute;n digital del transcurrir
+del tiempo cambia en pasos discretos.</FONT></P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Podemos concluir que la
+diferencia principal entre las cantidades representadas de forma
+anal&oacute;gica y las representadas en forma digital es que las
+primeras son continuas y las segundas son discretas ( paso a paso)</FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none"><A NAME="ejemplo representacion digital"></A><A NAME="42"></A>
+<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Ejemplo
+representaci&oacute;n digital</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<FONT FACE="Thorndale"><FONT SIZE=3>Los CD son una muestra de como
+funciona el &quot;mundo digital&quot;. La m&uacute;sica en la forma
+original es anal&oacute;gica. Para grabar un CD se debe convertir la
+se&ntilde;al anal&oacute;gica&nbsp; en una se&ntilde;al digital. La
+se&ntilde;al mec&aacute;nica, que b&aacute;sicamente es un
+desplazamiento de aire, se recoge por un micr&oacute;fono que la
+convierte en una se&ntilde;al el&eacute;ctrica con la misma forma que
+la se&ntilde;al mec&aacute;nica. Luego se debe codificar la se&ntilde;al
+anal&oacute;gica el&eacute;ctrica para convertirla a digital.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=916 BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=434>
+	<COL WIDTH=466>
+	<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+		<TD WIDTH=434>
+			<P ALIGN=CENTER><IMG SRC="intro1.png" NAME="Imagen2" ALIGN=BOTTOM WIDTH=395 HEIGHT=206 BORDER=0></P>
+		</TD>
+		<TD WIDTH=466>
+			<P ALIGN=JUSTIFY><STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">Se&ntilde;al
+			mec&aacute;nica:</FONT></FONT></FONT></STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">
+			Es anal&oacute;gica. Es el sonido original que vamos a grabar.</FONT></FONT></FONT></P>
+			<P ALIGN=LEFT><FONT SIZE=1 STYLE="font-size: 2pt"><STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">Se&ntilde;al
+			el&eacute;ctrica:</FONT></FONT></FONT></STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">
+			Es el sonido recogido por un micr&oacute;fono (transductor)
+			convertido a voltaje que tiene la misma forma que la se&ntilde;al
+			mec&aacute;nica.</FONT></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR BGCOLOR="#d0d0d0" VALIGN=TOP>
+		<TD WIDTH=434>
+			<P ALIGN=CENTER><IMG SRC="intro2.png" NAME="Imagen3" ALIGN=BOTTOM WIDTH=409 HEIGHT=224 BORDER=0></P>
+		</TD>
+		<TD WIDTH=466>
+			<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Luego viene
+			un proceso de muestro para convertir la se&ntilde;al anal&oacute;gica
+			a digital. Esto se hace con dos variables, el tiempo de muestreo
+			(cada cuanto tiempo se toma una muestra de la se&ntilde;al
+			original) y los niveles de cuantizaci&oacute;n (en cuantos nivele
+			se divide el rango de la se&ntilde;al original. <BR>En este
+			ejemplo se tienen 9 niveles. Los rect&aacute;ngulos verdes
+			representan las muestras. Cada fracci&oacute;n de tiempo
+			determinada se toma una muestra de la se&ntilde;al original y se
+			le asigna un valor (en este caso del 0 al 9) lo mas cercano a
+			valor original.El el eje horizontal se muestra el valor escogido.
+			Estos n&uacute;meros son la representaci&oacute;n digital de la
+			se&ntilde;al original.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+		<TD WIDTH=434>
+			<P ALIGN=CENTER><IMG SRC="intro3.png" NAME="Imagen4" ALIGN=BOTTOM WIDTH=406 HEIGHT=228 BORDER=0></P>
+		</TD>
+		<TD WIDTH=466>
+			<P ALIGN=JUSTIFY><FONT SIZE=1 STYLE="font-size: 2pt"><STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">Se&ntilde;al
+			Digital:</FONT></FONT></FONT></STRONG><FONT SIZE=3><FONT FACE="Thorndale"><FONT COLOR="#000000">
+			Es el resultado de darle un c&oacute;digo a cada nivel. La se&ntilde;al
+			en azul es la conversi&oacute;n a se&ntilde;al digital de la se&ntilde;al
+			anal&oacute;gica original en rojo.</FONT></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<H2 STYLE="margin-top: 0cm; margin-bottom: 0cm; font-weight: medium; text-decoration: none">
+<FONT FACE="Thorndale"><FONT SIZE=3>&nbsp;</FONT></FONT></H2>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="ventajas"></A><A NAME="4"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Ventajas
+			sistemas digitales</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<OL>
+	<P STYLE="margin-bottom: 0cm"></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">F&aacute;cil
+	de dise&ntilde;ar&nbsp; . No son importantes valores exactos de
+	voltaje o de corriente, solo el rango en el que est&aacute;n
+	(HIGH(ALTO) o LOW(BAJO)).</FONT></P>
+	<P STYLE="margin-bottom: 0cm"></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Facilidad
+	para el almacenamiento de informaci&oacute;n</FONT></P>
+	<P STYLE="margin-bottom: 0cm"></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Mayor
+	apreciaci&oacute;n y precisi&oacute;n </FONT>
+	</P>
+	<P STYLE="margin-bottom: 0cm"></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">La
+	operaci&oacute;n puede ser programada. Los sistemas anal&oacute;gicos
+	tambi&eacute;n pueden programarse, pero la variedad y complejidad de
+	las operaciones es limitada.</FONT></P>
+	<P STYLE="margin-bottom: 0cm"></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Son mas
+	inmunes al ruido</FONT></P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="limitaciones"></A><A NAME="5"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Limitaciones
+			sistemas digitales</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Solo hay una
+desventaja cuando se utilizan t&eacute;cnicas digitales: El mundo
+real es anal&oacute;gico</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT COLOR="#000000">Las
+cantidades f&iacute;sicas son por naturaleza anal&oacute;gicas, y son
+estas magnitudes las entradas y salidas que son monitoreadas,
+operadas y controladas por un sistema. </FONT></FONT>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Para tomar ventaja de las
+t&eacute;cnicas digitales cuando tratamos con entradas y salidas
+anal&oacute;gicas debemos seguir tres pasos:<BR></FONT><BR><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT><FONT FACE="Thorndale">Convertir las entradas
+	anal&oacute;gicas del mundo real a la forma digital</FONT></P>
+	<LI><P ALIGN=LEFT><FONT FACE="Thorndale">Procesar la informaci&oacute;n
+	digital</FONT></P>
+	<LI><P ALIGN=LEFT><FONT FACE="Thorndale">Convertir las salidas
+	digitales de nuevo a la forma anal&oacute;gica del mundo real.</FONT></P>
+</OL>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="sistema combinatorio"></A><A NAME="6"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			combinatorio</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Aquel en el cual
+el valor actual de las salidas est&aacute; determinado por el valor
+actual de las entradas</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="sistema secuencial"></A><A NAME="7"></A><A NAME="11"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			secuencial</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">Aquel
+en el cual el valor actual de las salidas depende no solo del valor
+actual de las entradas, sino tambi&eacute;n de los estados previos.</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Para entender mejor la
+diferencia entre los sistemas combinatorios y secuenciales veamos el
+siguiente ejemplo:</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Consid&eacute;rese los dos tipos
+de candados:</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">La salida ser&aacute; la
+condici&oacute;n del candado ( cerrado o abierto). Las entradas son
+las posiciones de la combinaci&oacute;n</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=916 BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=70>
+	<COL WIDTH=341>
+	<COL WIDTH=79>
+	<COL WIDTH=394>
+	<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+		<TD COLSPAN=2 WIDTH=419>
+			<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>Candado de
+			combinaci&oacute;n</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=481>
+			<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>Candado de
+			disco</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR BGCOLOR="#d0d0d0">
+		<TD WIDTH=70 BGCOLOR="#ffffff">
+			<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="intro4.jpg" NAME="Imagen5" ALIGN=BOTTOM WIDTH=66 HEIGHT=132 BORDER=0></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=341 VALIGN=TOP>
+			<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Este tipo de
+			candado se abrir&aacute; cada vez que se ajusten los tres n&uacute;meros
+			correctos y no importa el orden en que estos n&uacute;meros se
+			ajustaron. En otras palabras, en un momento determinado, la
+			condici&oacute;n abierto o cerrado del candado depender&aacute;
+			del valor de la combinaci&oacute;n en ese momento. Si la
+			combinaci&oacute;n es la correcta el candado abrir&aacute;, si no
+			estar&aacute; cerrado.</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=79 BGCOLOR="#ffffff">
+			<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="intro5.jpg" NAME="Imagen6" ALIGN=BOTTOM WIDTH=83 HEIGHT=109 BORDER=0></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=394 VALIGN=TOP>
+			<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Para este
+			tipo de candado la condici&oacute;n abierto o cerrado depende no
+			solo de la posici&oacute;n actual del control, sino tambi&eacute;n
+			de la forma &nbsp; como se haya manipulado anteriormente. Si los
+			n&uacute;meros se colocaron en el orden adecuado el candado se
+			abrir&aacute;. En caso contrario el candado estar&aacute; cerrado.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+		<TD WIDTH=70>
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=341></TD>
+		<TD WIDTH=79></TD>
+		<TD WIDTH=394></TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

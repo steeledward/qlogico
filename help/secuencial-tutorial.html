@@ -1,0 +1,943 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Lógica Secuencial</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030916;22010300">
+	<META NAME="CHANGED" CONTENT="20030917;2101400">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6><FONT FACE="Thorndale">L&oacute;gica
+			Secuencial</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1><FONT FACE="Thorndale"><FONT SIZE=5>Contenido</FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm"><A HREF="#introduccion"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Introduccion</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#flip flops"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Flip-Flops</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#estado actual y siguiente"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Estado
+actual y siguiente</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#diagrama de tiempos"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Diagrama
+de tiempos</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#tabla de verdad"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+de verdad</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#tabla caracteristica"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+caracteristica</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#Ecuacion caracteristica"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Ecuaci&oacute;n
+caracteristica</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#tabla de exitacion"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+de exitaci&oacute;n</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#elemento de memoria"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Flip-Flop
+como elemento de memoria</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="introduccion"></A><A NAME="1"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Introducci&oacute;n</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale">Hasta ahora hemos analizado circuitos
+combinatorios. En este tipo de circuitos el valor de o las salidas
+depende del valor de las entradas en ese instante. En los sistemas
+secuenciales en cambio, la o las salidas son funci&oacute;n del valor
+presente y del valor pasado de las entradas.</FONT></P>
+<P><FONT FACE="Thorndale"><BR>En la figura a continuaci&oacute;n se
+muestra un diagrama de bloque de un circuito secuencial. Consiste de
+un circuito combinacional y elementos de memoria que son capaces de
+almacenar informaci&oacute;n binaria.</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><IMG SRC="secue1.png" NAME="Imagen2" ALIGN=BOTTOM WIDTH=358 HEIGHT=188 BORDER=0></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Esta informaci&oacute;n binaria
+almacenada en los elementos de memoria en cualquier instante definen
+el &quot;estado&quot; del circuito secuencial. La informaci&oacute;n
+binaria en las entradas externas y el estado presente de los
+elementos de memoria determinar&aacute;n el valor de la o las
+salidas. Las entradas tambi&eacute;n determinar&aacute;n las
+condiciones para el cambio del &quot;estado&quot; de los elementos de
+memoria. Las salidas del circuito secuencial son una funci&oacute;n
+de las entradas y del &quot;estado&quot; presente de los elementos de
+memoria. El pr&oacute;ximo estado de los elementos de memoria tambi&eacute;n
+es funci&oacute;n de las entradas y del estado presente. </FONT>
+</P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">En resumen, el comportamiento de
+un circuito secuencial se determina por la secuencia en el tiempo de
+entradas, salidas y estados internos, que lo har&aacute;n pasar por
+un numero finito de estados.</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Thorndale">Los elementos de memoria en un
+circuito secuencial se denominan flip-flops. Un flip flop posee dos
+salidas, una para el valor normal y otro para el valor
+complementado(negado) almacenado en &eacute;l.</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="flip flops"></A><A NAME="2"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Flip-Flops</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal"><FONT FACE="Thorndale">Un
+flip-flop puede construirse a partir de dos compuertas NAND o dos
+compuertas NOR. Estos flip-flops se muestran en la figura. Cada
+flip-flop posee dos salidas, Q y Q', y dos entradas, set y clear.
+Este tipo de flip-flop se denomina&nbsp; flip-flop SC o latch SC.
+(Tambi&eacute;n se le conoce como set y reset o flip-flop SR ).</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=50%>
+			<P ALIGN=CENTER><IMG SRC="secue2.png" NAME="Imagen3" ALIGN=LEFT WIDTH=252 HEIGHT=169 BORDER=0><BR CLEAR=LEFT><BR><BR>
+			</P>
+			<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>FLIP-FLOP CON
+			COMPUERTAS NOR</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=50%>
+			<P ALIGN=CENTER><IMG SRC="secue3.png" NAME="Imagen4" ALIGN=LEFT WIDTH=252 HEIGHT=169 BORDER=0><BR CLEAR=LEFT><BR><BR>
+			</P>
+			<P ALIGN=CENTER><FONT FACE="Arial"><FONT SIZE=2>FLIP-FLOP CON
+			COMPUERTAS NOR</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P>&nbsp;</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale">El flip-flop &nbsp;
+tiene dos estados &uacute;tiles. Cuando Q=1 y Q'=0, se encuentra en
+el estado <I>set </I>(o estado 1). Cuando Q=0 y Q'=1, se encuentra en
+el estado <I>clear </I>(o estado 0). Las salidas Q y Q' son la una el
+complemento de la otra y se nombran como la salida normal y la salida
+&nbsp; negada respectivamente. El estado binario del flip-flop se
+toma con el valor de la salida normal (Q).</FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><BR>Para
+representar de forma compacta el flip flop, no es necesario dibujar
+las compuertas . La representaci&oacute;n que se utilizar&aacute;
+ser&aacute; la indicada en la figura.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT COLOR="#355e00"><FONT FACE="helvetica, arial"><IMG SRC="secue4.png" NAME="Imagen5" ALIGN=BOTTOM WIDTH=141 HEIGHT=130 BORDER=0></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="estado actual y siguiente"></A><A NAME="3"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Estado
+			actual y siguiente</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="font-weight: medium"><FONT FACE="Thorndale">Cuando
+se aplica un 1 en ambas entradas en el flip-flop, tanto la salida&nbsp;
+Q como la Q' va a 0. Esta condici&oacute;n viola el hecho que las
+salidas sean complementarias. Esta condici&oacute;n viola el hecho de
+que las salidas sean una la negaci&oacute;n de la otra. En la
+operaci&oacute;n normal esta condici&oacute;n debe evitarse,
+asegur&aacute;ndose que no se aplique simult&aacute;neamente un 1 en
+ambas entradas.</FONT></P>
+<P ALIGN=LEFT><A NAME="13"></A><FONT FACE="Thorndale">Veamos como
+funciona un FF (flip-flop) en forma detallada. Supongamos una
+condici&oacute;n inicial estable (que el valor de las entradas y las
+salidas correspondientes sean consecuentes con el comportamiento de
+las compuertas).</FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale">Supongamos:
+S=0, C=0, Q=0 y Q'=1.<BR>Si en un momento determinado cambiamos la
+entrada S de 0 a 1, la salida de la compuerta 1 (Q') cambiar&aacute;
+de 1 a 0. Como esta salida es tambi&eacute;n una de las entradas de
+la compuerta 2, al haber un 0 y un 0 como entrada, su salida (Q)
+pasar&aacute; de 0 a 1. Como antes, ahora la salida de la compuerta 2
+(Q) es una de las entradas de la compuerta 1. Como hubo un cambio de
+0 a 1 debemos ver que efecto tiene esto en la salida de la compuerta
+1. Las entradas son 1 y 1 a lo que la compuerta NOR responder&aacute;
+con un 0 a la salida (Q'). Como esta estaba en 0, el FF queda en un
+estado estable y no hay mas cambios.</FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Podemos
+resumir el comportamiento para el FF cuando aplicamos un pulso en
+S(subir a 1 y bajar a 0 nuevamente ) de la siguiente manera:</FONT></FONT></P>
+<UL>
+	<LI><P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Estando el
+	FF en 0 (Qn = 0) si aplicamos un pulso en S el estado futuro ser&aacute;
+	1 (Qn+1 = 1).</FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Estando el
+	FF en 0 (Qn = 1) si aplicamos un pulso en S el estado futuro ser&aacute;
+	1 (Qn+1 = 1).</FONT></FONT></P>
+</UL>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Con esto podemos
+decir que si aplicamos un pulso en S, independientemente del estado
+actual, (Qn) el estado futuro ser&aacute; 1 (Qn+1 = 1)</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="diagrama de tiempos"></A><A NAME="4"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Diagrama
+			de tiempos</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale">Para
+analizar los circuitos secuenciales, a menudo se recurre a un
+DIAGRAMA DE TIEMPO. Esto es un grafico que describe el comportamiento
+en el tiempo de las variables de entrada y salida del circuito. Por
+comportamiento queremos indicar el valor logico&nbsp; (0 o 1) que
+toman estas variables.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=30%>
+			<P ALIGN=CENTER><FONT FACE="Arial"><IMG SRC="secue5.png" NAME="Imagen8" ALIGN=BOTTOM WIDTH=252 HEIGHT=169 BORDER=0><BR>FLIP-FLOP
+			SC</FONT></P>
+		</TD>
+		<TD WIDTH=70%>
+			<P ALIGN=CENTER><BR><BR><BR>
+			</P>
+			<P ALIGN=CENTER><IMG SRC="secue6.png" NAME="Imagen6" ALIGN=BOTTOM WIDTH=434 HEIGHT=158 BORDER=0></P>
+			<P ALIGN=CENTER><FONT FACE="Arial">DIAGRAMA DE TIEMPO</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Podemos resumir
+el comportamiento del flip flop con una tabla de verdad. En ella
+colocaremos las entradas S y C y el estado actual Qn para saber cual
+ser&aacute; el estado futuro Qn+1. </FONT></FONT>
+</P>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=5 CELLSPACING=0 BGCOLOR="#ffffcc">
+	<COLGROUP>
+		<COL WIDTH=3*>
+		<COL WIDTH=3*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=72*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=5*>
+		<COL WIDTH=50*>
+		<COL WIDTH=3*>
+		<COL WIDTH=3*>
+		<COL WIDTH=27*>
+		<COL WIDTH=72*>
+		<COL WIDTH=14*>
+		<COL WIDTH=3*>
+	</COLGROUP>
+	<TR>
+		<TD ROWSPAN=4 WIDTH=1% VALIGN=TOP></TD>
+		<TD ROWSPAN=2 WIDTH=1% VALIGN=TOP></TD>
+		<TD ROWSPAN=2 WIDTH=28% VALIGN=TOP>
+			<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0>
+				<COL WIDTH=34*>
+				<COL WIDTH=31*>
+				<COL WIDTH=40*>
+				<COL WIDTH=151*>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">S</FONT></STRONG></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">C</FONT></STRONG></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">Qn</FONT></STRONG></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">Qn+1</FONT></STRONG></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>indeterminado</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD WIDTH=13%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=12%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=16%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=59%>
+						<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>indeterminado</FONT></FONT></P>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=2% VALIGN=TOP>
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=4 WIDTH=20%>
+			<P ALIGN=JUSTIFY><FONT FACE="Thorndale"><FONT SIZE=3>Esta tabla
+			puede reducirse de la forma siguiente, obteniendose lo que se
+			denomina tabla caracteristica:</FONT></FONT></P>
+		</TD>
+		<TD ROWSPAN=4 WIDTH=1% VALIGN=TOP>
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=3 WIDTH=1% VALIGN=TOP>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=10% BGCOLOR="#ffffcc">
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=28% BGCOLOR="#ffffcc">
+			<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>TABLA
+			CARACTERISTICA</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=5% BGCOLOR="#ffffcc">
+			<P><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=3 WIDTH=1% VALIGN=TOP>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 WIDTH=10% BGCOLOR="#ffffcc">
+			<P><IMG SRC="secue7.png" NAME="Imagen7" ALIGN=LEFT WIDTH=57 HEIGHT=41 BORDER=0><BR CLEAR=LEFT><BR>
+			</P>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=28% VALIGN=TOP>
+			<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0 FRAME=VOID RULES=COLS>
+				<COL WIDTH=69*>
+				<COL WIDTH=40*>
+				<COL WIDTH=40*>
+				<COL WIDTH=40*>
+				<COL WIDTH=69*>
+				<TBODY>
+					<TR>
+						<TD ROWSPAN=5 WIDTH=27% VALIGN=TOP BGCOLOR="#ffffcc">
+							<P><BR>
+							</P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">S</FONT></STRONG></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">C</FONT></STRONG></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">Qn+1</FONT></STRONG></P>
+						</TD>
+						<TD ROWSPAN=5 WIDTH=27% VALIGN=TOP BGCOLOR="#ffffcc">
+							<P><BR>
+							</P>
+						</TD>
+					</TR>
+				</TBODY>
+				<TBODY>
+					<TR>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>Qn</FONT></FONT></P>
+						</TD>
+					</TR>
+				</TBODY>
+				<TBODY>
+					<TR>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+						</TD>
+					</TR>
+				</TBODY>
+				<TBODY>
+					<TR>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+						</TD>
+					</TR>
+				</TBODY>
+				<TBODY>
+					<TR>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+						</TD>
+						<TD WIDTH=15% BGCOLOR="#ffffcc">
+							<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>?</FONT></FONT></P>
+						</TD>
+					</TR>
+					<TR BGCOLOR="#ffffcc">
+						<TD COLSPAN=5 WIDTH=100%>
+							<P><BR>
+							</P>
+						</TD>
+					</TR>
+				</TBODY>
+			</TABLE>
+		</TD>
+		<TD ROWSPAN=2 WIDTH=5% BGCOLOR="#ffffcc">
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 COLSPAN=3 WIDTH=31%></TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2 COLSPAN=5 WIDTH=47%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=6 WIDTH=53%></TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Para la descripci&oacute;n
+del funcionamiento de un FF se utilizan tablas de verdad, tablas
+caracteristicas, ecuaciones caracteristicas y tablas de exitaci&oacute;n.</FONT></P>
+<P ALIGN=LEFT><A NAME="tabla de verdad"></A><STRONG><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="helvetica, arial"><FONT COLOR="#355e00">Tabla
+de verdad</FONT></FONT></FONT></STRONG></P>
+<P ALIGN=LEFT><FONT FACE="helvetica, arial"><FONT COLOR="#355e00"><STRONG><FONT FACE="Thorndale"><FONT COLOR="#000000">M</FONT></FONT></STRONG><FONT FACE="Thorndale"><FONT COLOR="#000000">uestra
+el comportamiento del estado futuro en funci&oacute;n de las entradas
+y el estado presente.Se utiliza para obtener la ecuaci&oacute;n
+caracteristica.</FONT></FONT></FONT></FONT></P>
+<P ALIGN=LEFT><A NAME="tabla caracteristica"></A><FONT FACE="helvetica, arial"><FONT COLOR="#355e00"><B><BR></B><STRONG><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale">Tabla
+caracteristica</FONT></FONT></STRONG></FONT></FONT></P>
+<P ALIGN=LEFT><FONT COLOR="#355e00"><FONT FACE="helvetica, arial"><FONT FACE="Thorndale"><FONT COLOR="#000000">Muestra
+el comportamiento del estado futuro pero de una manera mas compacta
+que la tabla de verdad.</FONT></FONT><B><BR></B></FONT></FONT><BR><BR>
+</P>
+<P ALIGN=LEFT><A NAME="ecuacion caracteristica"></A><STRONG><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Ecuaci&oacute;n
+caracteristica</FONT></FONT></FONT></STRONG></P>
+<P ALIGN=LEFT><FONT COLOR="#355e00"><FONT FACE="helvetica, arial"><FONT FACE="Thorndale"><FONT COLOR="#000000">Es
+otra forma de describir el comportamiento del estado futuro, pero a
+menudo mas &uacute;til durante el analisis de circuito porque puede
+ser utilizada como parde de una expresi&oacute;n booleana.</FONT></FONT><B><BR></B></FONT></FONT><BR><BR>
+</P>
+<P ALIGN=LEFT><A NAME="tabla de exitacion"></A><STRONG><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Tabla
+de exitaci&oacute;n</FONT></FONT></FONT></STRONG></P>
+<P ALIGN=LEFT STYLE="font-weight: medium"><FONT FACE="Thorndale">Se
+obtiene de la ecuaci&oacute;n caracteristica. Muestra las entradas
+que se necesitan para pasar de un estado a otro. Se utilizan en la
+sintesis de circuitos secuenciales. </FONT>
+</P>
+<P ALIGN=JUSTIFY STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Para
+el FF SC&nbsp; ya se mostr&oacute; la tabla de verdad y la tabla
+caracteristica. </FONT></FONT>
+</P>
+<TABLE WIDTH=80% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+	<COL WIDTH=194*>
+	<COL WIDTH=26*>
+	<COL WIDTH=6*>
+	<COL WIDTH=7*>
+	<COL WIDTH=6*>
+	<COL WIDTH=7*>
+	<COL WIDTH=9*>
+	<TR>
+		<TD WIDTH=76%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=10%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=3%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=3%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>_</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=76%>
+			<P ALIGN=LEFT STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>La
+			ecuaci&oacute;n caracteristica se obtiene de la tabla de verdad y
+			ser&aacute; : </FONT></FONT>
+			</P>
+		</TD>
+		<TD WIDTH=10%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Qn+1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=2%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>=</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=3%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>S</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=2%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>+</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=3%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>C</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=4%>
+			<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Qn</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<P ALIGN=JUSTIFY><FONT FACE="Thorndale">Hay que recordar que la
+condici&oacute;n S=C=1 es prohibida, por lo que la ecuaci&oacute;n
+caracteristica ser&aacute; valida&nbsp; siempre que S</FONT><STRONG><FONT FACE="Thorndale">&middot;</FONT></STRONG><FONT FACE="Thorndale">C=0</FONT></P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0 FRAME=VOID RULES=GROUPS>
+	<COLGROUP>
+		<COL WIDTH=1*>
+		<COL WIDTH=164*>
+		<COL WIDTH=4*>
+		<COL WIDTH=4*>
+		<COL WIDTH=4*>
+		<COL WIDTH=4*>
+		<COL WIDTH=4*>
+		<COL WIDTH=4*>
+		<COL WIDTH=1*>
+		<COL WIDTH=8*>
+		<COL WIDTH=3*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=10*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=17*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=7*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=2*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=13*>
+		<COL WIDTH=8*>
+	</COLGROUP>
+	<TBODY>
+		<TR>
+			<TD ROWSPAN=3 COLSPAN=9 WIDTH=74% VALIGN=TOP>
+				<P ALIGN=JUSTIFY><BR><BR>
+				</P>
+				<P ALIGN=JUSTIFY STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>La
+				tabla de exitaci&oacute;n, que nos da el valor de las entrada
+				para pasar de un estado a otro y se obtiene de la ecuaci&oacute;n
+				caracteristica. </FONT></FONT>
+				</P>
+			</TD>
+			<TD WIDTH=3% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+			<TD COLSPAN=6 WIDTH=20%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>TABLA
+				DE EXITACION</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=8 COLSPAN=2 WIDTH=4% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=4%>
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">Qn</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=6%>
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">Qn+1</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=3%>
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">S</FONT></STRONG></P>
+			</TD>
+			<TD WIDTH=1%>
+				<P ALIGN=CENTER><STRONG><FONT FACE="Thorndale">C</FONT></STRONG></P>
+			</TD>
+			<TD ROWSPAN=8 COLSPAN=2 WIDTH=8% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD ROWSPAN=3 WIDTH=4%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=3 WIDTH=6%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=3 WIDTH=3%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=3 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>X</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=3 WIDTH=1% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=64%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=1%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=1%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=1%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=1%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=2% VALIGN=BOTTOM>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>_</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=1%>
+				<P><BR>
+				</P>
+			</TD>
+			<TD ROWSPAN=3 WIDTH=1% VALIGN=TOP>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=2 WIDTH=64%>
+				<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Para
+				mantenerse de Qn=0 a Qn+1=0, sutituyendo los valores tenemos:</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>=</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>S</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>+</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=2%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>C</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD ROWSPAN=2 WIDTH=4%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=6%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=3%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD ROWSPAN=2 WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD ROWSPAN=4 COLSPAN=9 WIDTH=74% VALIGN=TOP>
+				<P ALIGN=JUSTIFY STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Asi
+				para cumplir con la ecuacion caracteristica tenemos que: S debe
+				ser igual a cero, y no importa que valor (0 o 1) tenga C. De esta
+				manera, haciendo lo mismo para todas las combinaciones se obtiene
+				la tabla de exitaci&oacute;n que se muestra.</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=4%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD WIDTH=4%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=6%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=3%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>X</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=1%>
+				<P ALIGN=CENTER STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=8 WIDTH=26%>
+				<P><BR>
+				</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P ALIGN=JUSTIFY><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P STYLE="font-weight: medium; text-decoration: none"><A NAME="elemento de memoria"></A><A NAME="5"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Flip-Flop
+			como elemento de memoria</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT FACE="Thorndale">Si
+analizan detenidamente el funcionamiento del FF anterior, pueden
+darse cuenta&nbsp; que tienen la capacidad de &quot;recordar&quot;
+cual de las dos entradas, S o C fue la ultima en estar en 1. Si el FF
+est&aacute; en 0, (Q=0) fue porque se habia aplicado un pulso en
+C(clear). Si est&aacute; en 1 se hab&iacute;a aplicado un pulso en S
+(set). Obviando la condici&oacute;n S=C=1 que es un estado prohibido,
+normalmente el FF estar&aacute; en la condici&oacute;n S=C=0, que es
+la condici&oacute;n de mantener el estado. Si queremos guardar un 1,
+aplicaremos un pulso () en S y al quedar las entradas nuevamente en
+S=C=0, se mantendr&aacute; ese estado hasta que no se realice otro
+cambio. Si por el contrario queremos guardar un 0, se aplicar&aacute;
+un pulso en C. Con esto podemos definir al FF como un elemento de
+memoria de 1 bit.</FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

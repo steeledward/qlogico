@@ -1,0 +1,1132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Bases de números</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030901;22251900">
+	<META NAME="CHANGED" CONTENT="20030916;21450900">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P ALIGN=LEFT><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="../../../../tmp/qlogico/help/qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6>
+			B<FONT FACE="Thorndale">ase de n&uacute;meros</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<H1 ALIGN=LEFT><A NAME="15"></A><FONT SIZE=5>Contenido</FONT></H1>
+<P ALIGN=LEFT><A HREF="#1"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Introducci&oacute;n</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#2"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+de numeraci&oacute;n binario</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#3"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de binario a decimal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#4"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de decimal a binario</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#5"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+de numeraci&oacute;n octal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#6"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de octal a decimal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#7"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de decimal a octal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#8"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de octal a binario</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#9"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de binario a octal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#10"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Sistema
+de numeraci&oacute;n Hexadecimal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#11"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de hexadecimal a decimal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#12"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de decimal a hexadecimal</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#13"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de hexadecimal a binario</FONT></FONT></FONT></A></P>
+<P ALIGN=LEFT><A HREF="#14"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de binario a hexadecimal</FONT></FONT></FONT></A></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="1"></A><A NAME="31"></A><A NAME="sax2Intro1"></A><A NAME="22"></A><A NAME="sax2Intro3"></A><A NAME="111"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Introducci&oacute;n</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>La importancia del sistema
+decimal radica en que se utiliza universalmente para representar
+cantidades fuera de un sistema digital. Es decir que habr&aacute;
+situaciones en las cuales los valores decimales tengan que convenirse
+en valores binarios antes de que se introduzcan en sistema digital.
+Entonces habr&aacute; situaciones en que los valores binarios de las
+salidas de un circuito digital tengan que convertir a valores
+decimales para presentarse al mundo exterior. Por otro lado del
+binario y el decimal, otros dos sistemas de numeraci&oacute;n
+encuentran amplias aplicaciones en los sistemas digitales. Los
+sistemas octal (base 8) y hexadecimal (base 16) se usan con el mismo
+fin, que es ofrecer un eficaz medio de representaci&oacute;n de
+n&uacute;meros binarios grandes. Como veremos, ambos sistemas
+num&eacute;ricos tienen la ventaja de que pueden convenirse
+f&aacute;cilmente al y del binario.</FONT></FONT></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>Tabla Comparativa</FONT></FONT></P>
+<CENTER>
+	<TABLE WIDTH=373 BORDER=1 BORDERCOLOR="#000080" CELLPADDING=2 CELLSPACING=4>
+		<COL WIDTH=44>
+		<COL WIDTH=53>
+		<COL WIDTH=33>
+		<COL WIDTH=45>
+		<COL WIDTH=53>
+		<COL WIDTH=90>
+		<TR>
+			<TD WIDTH=44 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>binario</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>decimal</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>hexa</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>binario</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>decimal</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90 BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>hexadecimal</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0000</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1000</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>8</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>8</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0001</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1001</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>9</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>9</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0010</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>2</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>2</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1010</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>10</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>A</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0011</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>3</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>3</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1011</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>11</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>B</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0100</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>4</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>4</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1100</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>12</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>C</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0101</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>5</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>5</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1101</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>13</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>D</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0110</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>6</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>6</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1110</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>14</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>E</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=44>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0111</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>7</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=33>
+				<P><FONT FACE="Arial"><FONT SIZE=2>7</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=45>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1111</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=53>
+				<P><FONT FACE="Arial"><FONT SIZE=2>15</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=90>
+				<P><FONT FACE="Arial"><FONT SIZE=2>F</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="2"></A><A NAME="16"></A><A NAME="311"></A><A NAME="sax2Intro11"></A><A NAME="221"></A><A NAME="sax2Intro31"></A><A NAME="1111"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			de numeraci&oacute;n binario</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H2><A NAME="3"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de binario a decimal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>El sistema de numeraci&oacute;n
+binario o sistema de posici&oacute;n donde cada d&iacute;gito binario
+(bit) tiene un valor basado en su posici&oacute;n relativa al LSB.
+Cualquier n&uacute;mero binario puede convenirse a su equivalente
+decimal, simplemente sumando en el n&uacute;mero binario las diversas
+posiciones que contenga un 1. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:<BR>1 1 1 0 1 1<SUB>2</SUB>
+de binario a decimal 1 x 2<SUP>5</SUP> + 1 x 2<SUP>4</SUP> + 1 x 2<SUP>3</SUP>
++ 0 x 2<SUP>2</SUP> + 1 x 2 + 1 = 69<SUB>10</SUB></FONT></FONT></P>
+<H2><A NAME="4"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de decimal a binario</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Existen dos maneras de
+convenir un n&uacute;mero decimal entero a su representaci&oacute;n
+equivalente en el sistema binario. El primer m&eacute;todo es inverso
+al proceso descrito anteriormente. El n&uacute;mero decimal se
+expresa simplemente como una suma de potencias de 2 y luego los unos
+y los ceros se escriben en las posiciones adecuadas de los bits. </FONT></FONT>
+</P>
+<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>45 = 32 + 8 + 4 +
+l = 2<SUP>5</SUP> + 0 + 2<SUP>3</SUP> +2 <SUP>2</SUP> + 0 + 2<SUP>0
+</SUP>entonces es igual a 1 0 1 1 0 1<SUB>2</SUB></FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><SUB><BR></SUB>Pasar a decimal
+el binario 10101110<SUB>2</SUB></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Thorndale"><FONT SIZE=3>1
+0 1 0 1 1 1 0</FONT></FONT></P>
+<CENTER>
+	<TABLE WIDTH=150 BORDER=1 CELLPADDING=4 CELLSPACING=4>
+		<COL WIDTH=82>
+		<COL WIDTH=38>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 * 2<SUP>0</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 2<SUP>1</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>2</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 2<SUP>2</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>4</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 2<SUP>3</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>8</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 * 2<SUP>4</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 2<SUP>5</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>32</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 * 2<SUP>6</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 2<SUP>7</SUP> =</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>128</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=82>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>174</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Thorndale"><FONT SIZE=3>10101110<SUB>2</SUB>
+= 174<SUB>10</SUB> </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>El segundo m&eacute;todo
+consiste dividir repetidas veces el n&uacute;mero entre dos hasta que
+su cociente sea menor que &eacute;l. </FONT></FONT>
+</P>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:&nbsp;</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image130.png" NAME="Imagen2" ALIGN=BOTTOM WIDTH=60 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image131.png" NAME="Imagen3" ALIGN=BOTTOM WIDTH=54 HEIGHT=41 BORDER=0>con
+residuo 1</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image132.png" NAME="Imagen4" ALIGN=BOTTOM WIDTH=53 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image133.png" NAME="Imagen5" ALIGN=BOTTOM WIDTH=45 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image134.png" NAME="Imagen6" ALIGN=BOTTOM WIDTH=40 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image135.png" NAME="Imagen7" ALIGN=BOTTOM WIDTH=40 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image136.png" NAME="Imagen8" ALIGN=BOTTOM WIDTH=36 HEIGHT=41 BORDER=0>con
+residuo 0</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image137.png" NAME="Imagen9" ALIGN=BOTTOM WIDTH=40 HEIGHT=41 BORDER=0>con
+residuo 1</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Entonces el n&uacute;mero se
+forma tomando los residuos pero en forma inversa, es decir el primer
+digito ser&aacute; el &uacute;ltimo residuo y as&iacute;
+sucesivamente. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>El n&uacute;mero quedar&iacute;a
+como sigue: 1 0 0 0 0 0 1 0<SUB>2</SUB> </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="21"></A><A NAME="161"></A><A NAME="3111"></A><A NAME="sax2Intro111"></A><A NAME="2211"></A><A NAME="sax2Intro311"></A><A NAME="11111"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Operaciones
+			Binarias</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>En lo que sigue se adopta como
+convenci&oacute;n la l&oacute;gica positiva, lo que implica:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>verdadero = 1 = activo,
+------, falso = 0 = inactivo<BR></FONT></FONT><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Hay cinco operaciones binarias
+b&aacute;sicas: AND, OR, NOT, XOR y ADD. La resta, multiplicaci&oacute;n
+y divisi&oacute;n se derivan de estas cinco anteriores. Cualquiera
+sea la longitud de la palabra o palabras objeto de la operaci&oacute;n,
+siempre se hace de a un bit por vez de derecha a izquierda (tal como
+si fuera una suma o resta con n&uacute;meros decimales). Esto permite
+una definici&oacute;n de cada operaci&oacute;n que es independiente
+de la longitud del o de los operando(s). La operaci&oacute;n NOT es
+la &uacute;nica que se realiza sobre un s&oacute;lo operando (es
+unaria), y las otras cuatro sobre dos operandos.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<UL>
+	<UL>
+		<LI><P ALIGN=LEFT STYLE="margin-top: 0.42cm; page-break-after: avoid">
+		<FONT FACE="Thorndale"><FONT SIZE=3>La operaci&oacute;n AND (Y)
+		tiene resultado 1 si sus dos operandos son ambos 1 </FONT></FONT>
+		</P>
+		<LI><P ALIGN=LEFT STYLE="margin-top: 0.42cm; page-break-after: avoid">
+		<FONT FACE="Thorndale"><FONT SIZE=3>La operaci&oacute;n OR (O)
+		tiene resultado 1 si cualquiera de sus operandos es 1 </FONT></FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>La
+		operaci&oacute;n XOR tiene resultado 1 si los operandos son
+		distintos (uno en 0 y el otro en 1) </FONT></FONT>
+		</P>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>La
+		operaci&oacute;n NOT (NO) tiene resultado 1 si el operando es 0 y
+		viceversa </FONT></FONT>
+		</P>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<LI><P><FONT FACE="Thorndale"><FONT SIZE=3>La operaci&oacute;n ADD
+		(SUMA) se define igual que con los n&uacute;meros decimales </FONT></FONT>
+		</P>
+	</UL>
+</UL>
+<P><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=383 BORDER=1 BORDERCOLOR="#000080" CELLPADDING=2 CELLSPACING=1>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18% BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>AND</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19% BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>OR</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19% BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>XOR</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=22% BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>NOT</FONT></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=21% BGCOLOR="#000080">
+				<P><FONT COLOR="#ffffff"><FONT FACE="Arial"><FONT SIZE=2>SUMA</FONT></FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 * 0 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 + 0 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 X 0 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=22%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>NOT 1 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=21%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 + 0 = 0</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 * 1 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 + 1 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 X 1 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=22%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>NOT 0 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=21%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0 + 1 = 1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 0 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 + 0 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 X 0 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=22%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>---</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=21%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 + 0 = 1</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 * 1 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 + 1 = 1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=19%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 X 1 = 0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=22%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>---</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=21%>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1 + 1 = 10</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><EM><FONT FACE="Thorndale">Divisi&oacute;n</FONT></EM></P>
+<P ALIGN=CENTER><EM><FONT FACE="Thorndale">Reglas de la divisi&oacute;n
+binaria: </FONT></EM><FONT FACE="Thorndale">0/0</FONT><EM><FONT FACE="Thorndale">
+no permitida, </FONT></EM><FONT FACE="Thorndale">1/0</FONT><EM><FONT FACE="Thorndale">
+no permitida,</FONT></EM><FONT FACE="Thorndale">0/1=0</FONT><EM><FONT FACE="Thorndale">,
+</FONT></EM><FONT FACE="Thorndale">1/1=1</FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.42cm; page-break-after: avoid"><BR><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Thorndale"><FONT SIZE=3>Ejemplos
+De Suma</FONT></FONT></P>
+<CENTER>
+	<TABLE WIDTH=323 BORDER=1 CELLPADDING=4 CELLSPACING=4>
+		<COL WIDTH=24>
+		<COL WIDTH=17>
+		<COL WIDTH=18>
+		<COL WIDTH=10>
+		<COL WIDTH=18>
+		<COL WIDTH=11>
+		<COL WIDTH=10>
+		<COL WIDTH=18>
+		<COL WIDTH=17>
+		<COL WIDTH=18>
+		<COL WIDTH=25>
+		<TR VALIGN=TOP>
+			<TD WIDTH=24>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=11>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=54>
+				<P><FONT FACE="Arial"><FONT SIZE=2>Acarreo</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=24>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=11>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=25>
+				<P><FONT FACE="Arial"><FONT SIZE=2>25</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=24>
+				<P><FONT FACE="Arial"><FONT SIZE=2>+</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=11>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=25>
+				<P><FONT FACE="Arial"><FONT SIZE=2>+ 43</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=24>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=11>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=10>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=25>
+				<P><FONT FACE="Arial"><FONT SIZE=2>68</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=354 BORDER=1 CELLPADDING=4 CELLSPACING=4>
+		<COL WIDTH=18>
+		<COL WIDTH=17>
+		<COL WIDTH=18>
+		<COL WIDTH=18>
+		<COL WIDTH=18>
+		<COL WIDTH=18>
+		<COL WIDTH=18>
+		<COL WIDTH=17>
+		<COL WIDTH=18>
+		<COL WIDTH=18>
+		<COL WIDTH=38>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=68>
+				<P><FONT FACE="Arial"><FONT SIZE=2>Acarreo</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0.</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>6,50</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>+</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1.</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=38>
+				<P><FONT FACE="Arial"><FONT SIZE=2>+ 13.25 </FONT></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=17 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>0</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1.</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=17 VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=2>1</FONT></FONT></P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=18 VALIGN=TOP>
+				<P>&nbsp;</P>
+			</TD>
+			<TD WIDTH=38 VALIGN=BOTTOM SDVAL="19.75" SDNUM="2058;">
+				<P ALIGN=RIGHT><FONT FACE="Arial"><FONT SIZE=2>19.75</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Es lo que hacemos en la suma
+decimal 5+5=10 (nos llevamos &quot;1&quot; para la operaci&oacute;n
+del d&iacute;gito siguiente). Este llevarse &quot;1&quot; es
+vastamente usado entre los procesadores digitales y tiene un nombre
+especial: carry (lo ver&aacute; abreviado como CY, C o CF-por carry
+flag), lo que en castellano se traduce como &quot;acarreo&quot;.
+Estas operaciones tambi&eacute;n se llaman &quot;booleanas&quot; ya
+que se basan en el &aacute;lgebra de Boole.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>En un ordenador el sistema
+de numeraci&oacute;n es binario -en base 2, utilizando el 0 y el 1-
+hecho propiciado por ser precisamente dos los estados estables en los
+dispositivos digitales que componen una computadora.<BR></FONT></FONT><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="5"></A><A NAME="211"></A><A NAME="1611"></A><A NAME="31111"></A><A NAME="sax2Intro1111"></A><A NAME="22111"></A><A NAME="sax2Intro3111"></A><A NAME="111111"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			de numeraci&oacute;n octal</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>El sistema de numeraci&oacute;n
+octal es muy importante en el trabajo que se realiza en una
+computadora digital. Este tiene una base de ocho, lo cual significa
+que tiene ocho posibles d&iacute;gitos: 0, 1, 2, 3, 4, 5, 6 y 7. As&iacute;,
+cada d&iacute;gito de un n&uacute;mero octal puede tener cualquier
+valor del 0 al 7. </FONT></FONT>
+</P>
+<H2><A NAME="6"></A><BR><FONT SIZE=4 STYLE="font-size: 16pt"><FONT FACE="Thorndale"><FONT COLOR="#355e00">Conversi&oacute;n
+de octal a decimal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por tanto, un n&uacute;mero
+octal puede convenirse f&aacute;cilmente a su equivalente decimal
+multiplicando cada d&iacute;gito octal por su valor posicional. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>274<SUB>8</SUB> = 2 x 8<SUP>2</SUP>
++ 7 x 8<SUP>1</SUP> + 4 x 8<SUP>0</SUP></FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>284<SUB>8</SUB> = 2 x 64 + 7 x
+8 + 4 x 1</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>284<SUB>8</SUB> = 188<SUB>10</SUB></FONT></FONT></P>
+<H2><A NAME="7"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de decimal a octal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Un entero decimal se puede
+convertir a octal con el mismo m&eacute;todo dc divisi&oacute;n
+repetida que se us&oacute; en la conversi&oacute;n de decimal a
+binario, pero con un factor de divisi&oacute;n dc 8 en lugar de 2. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image138.png" NAME="Imagen10" ALIGN=BOTTOM WIDTH=60 HEIGHT=41 BORDER=0>con
+residuo 4</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image139.png" NAME="Imagen11" ALIGN=BOTTOM WIDTH=48 HEIGHT=41 BORDER=0>con
+residuo 4</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image140.png" NAME="Imagen12" ALIGN=BOTTOM WIDTH=45 HEIGHT=41 BORDER=0>con
+residuo 2</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Al final resulta que: 164<SUB>10</SUB>
+= 244<SUB>8</SUB></FONT></FONT></P>
+<H2><A NAME="8"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de octal a binario </FONT></FONT></FONT>
+</H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>La ventaja principal del
+sistema de numeraci&oacute;n octal es la facilidad con que se puede
+realizar la conversi&oacute;n entre n&uacute;meros binarios y
+octales. La conversi&oacute;n de octal a binario se lleva a cabo
+conviniendo cada d&iacute;gito octal en su equivalente binario dc 3
+bits. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>Por medio de estas
+conversiones, cualquier n&uacute;mero octal se conviene a binario,
+convirti&eacute;ndolo dc manera individual. </FONT></FONT>
+</P>
+<H2><A NAME="9"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de binario a octal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>La conversi&oacute;n de
+enteros binarios a octales es simplemente la operaci&oacute;n inversa
+del proceso anterior. Los bits del n&uacute;mero binario se agrupan
+en conjuntos de tres comenzando por el LSB. Luego, cada grupo se
+convierte a su equivalente octal. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Thorndale"><FONT SIZE=3>111
+001 101 110<BR>7 1 5 6<BR>entonces:<BR>111001101110<SUB>2</SUB> =
+7156<SUB>8</SUB></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="10"></A><A NAME="51"></A><A NAME="2111"></A><A NAME="16111"></A><A NAME="311111"></A><A NAME="sax2Intro11111"></A><A NAME="221111"></A><A NAME="sax2Intro31111"></A><A NAME="1111111"></A>
+			<FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Sistema
+			de numeraci&oacute;n Hexadecimal</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><A NAME="11"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=5><BR><B><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de hexadecimal a decimal</FONT></B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Thorndale"><FONT SIZE=3>Un
+n&uacute;mero hexadecimal se puede convenir a su equivalente decimal
+utilizando el hecho de que cada posici&oacute;n de los d&iacute;gitos
+hexadecimales tiene un valor que es una potencia de 16. El LSD tiene
+un valor de l6<SUP>0</SUP> = 1; el siguiente d&iacute;gito en
+secuencia tiene un valor de 16<SUP>1</SUP> = 16; el siguiente tiene
+un valor de 16<SUP>2</SUP> = 256 y as&iacute; sucesivamente. </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Thorndale"><FONT SIZE=3>Por
+ejemplo:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>812<SUB>16</SUB> = 8 x 16<SUP>2</SUP>
++ 1 x 16<SUP>1</SUP> + 2 x 16<SUP>0</SUP></FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>812<SUB>16</SUB> = 2048 + 16 +
+2</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>812<SUB>16</SUB> = 2066<SUB>10</SUB></FONT></FONT></P>
+<H2><A NAME="12"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de decimal a hexadecimal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Recuerde que efectuamos la
+conversi&oacute;n de decimal a binario por medio de la divisi&oacute;n
+repetida entre 2 y de decimal a octal por medio de la divisi&oacute;n
+repetida entre 8. De igual manera, la conversi&oacute;n de decimal a
+hexadecimal se puede efectuar por medio de la divisi&oacute;n
+repetida entre 16. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image141.png" NAME="Imagen13" ALIGN=BOTTOM WIDTH=62 HEIGHT=41 BORDER=0>con
+residuo 7</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image142.png" NAME="Imagen14" ALIGN=BOTTOM WIDTH=44 HEIGHT=41 BORDER=0>con
+residuo 010</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><IMG SRC="../../../../tmp/qlogico/help/Image143.png" NAME="Imagen15" ALIGN=BOTTOM WIDTH=45 HEIGHT=41 BORDER=0>con
+residuo 1</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>entonces: 423<SUB>10</SUB> =
+1A7<SUB>16</SUB></FONT></FONT></P>
+<H2><A NAME="13"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de hexadecimal a binario </FONT></FONT></FONT>
+</H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Al igual que el sistema de
+numeraci&oacute;n octal, el sistema hexadecimal se usa principalmente
+como m&eacute;todo ‘taquigr&aacute;fico&quot; en la representaci&oacute;n
+de n&uacute;meros binarios. Es una tarea relativamente simple la de
+convertir un n&uacute;mero hexadecimal en binario. Cada d&iacute;gito
+hexadecimal se convierte en su equivalente binario de 4 bits. </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>6D23<SUB>16</SUB> =
+110110100100011<SUB>2</SUB></FONT></FONT></P>
+<H2><A NAME="14"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=4 STYLE="font-size: 16pt">Conversi&oacute;n
+de binario a hexadecimal</FONT></FONT></FONT></H2>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Esta conversi&oacute;n es
+exactamente la operaci&oacute;n inversa del proceso anterior. El
+n&uacute;mero binario se agrupa en conjuntos de cuatro bits y cada
+grupo se convierte a su d&iacute;gito hexadecimal equivalente. Cuando
+es necesario se a&ntilde;aden ceros para completar un grupo de cuatro
+bits.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>1110100110<SUB>2</SUB> = 0011
+1010 0110</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>1110100110<SUB>2</SUB> = 3A6<SUB>16</SUB></FONT></FONT></P>
+<HR>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

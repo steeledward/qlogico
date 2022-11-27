@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>&Aacute;lgebra Booleana</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20030911;7115800">
+	<META NAME="CHANGED" CONTENT="20030916;21481600">
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		TH P { color: #000000 }
+		A:link { color: #004faf; text-decoration: none }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-MX" TEXT="#000000" LINK="#004faf" BGCOLOR="#ffffff">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><FONT SIZE=1 STYLE="font-size: 2pt"><IMG SRC="../../../../tmp/qlogico/help/qlogico.png" NAME="Imagen1" ALIGN=MIDDLE WIDTH=94 HEIGHT=99 BORDER=0><FONT SIZE=6><FONT FACE="Thorndale">&Aacute;lgebra
+			Booleana</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1><FONT FACE="Thorndale"><FONT SIZE=5>Contenido</FONT></FONT></H1>
+<P STYLE="margin-bottom: 0cm"><A HREF="#introduccion"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Introducci&oacute;n</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#algebra de boole"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">&Aacute;lgebra
+de boole</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><A HREF="#formas normales"><FONT SIZE=4><FONT FACE="Thorndale"><FONT COLOR="#355e00">Formas
+normales</FONT></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="introduccion"></A><A NAME="1"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Introducci&oacute;n</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Las &aacute;lgebras booleanas,
+estudiadas por primera vez en detalle por George Boole, constituyen
+un &aacute;rea de las matem&aacute;ticas que ha pasado a ocupar un
+lugar prominente con el advenimiento de la computadora digital. Son
+usadas ampliamente en el dise&ntilde;o de circuitos de distribuci&oacute;n
+y computadoras, y sus aplicaciones van en aumento en muchas otras
+&aacute;reas. En el nivel de l&oacute;gica digital de una
+computadora, lo que com&uacute;nmente se llama hardware, y que est&aacute;
+formado por los componentes electr&oacute;nicos de la m&aacute;quina,
+se trabaja con diferencias de tensi&oacute;n, las cuales generan
+funciones que son calculadas por los circuitos que forman el nivel.
+&Eacute;stas funciones, en la etapa de dise&ntilde;a del hardware,
+son interpretadas como funciones de boole.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>En el presente trabajo se
+intenta dar una definici&oacute;n de lo que es un &aacute;lgebra de
+boole; se tratan las funciones booleanas,<BR>haciendo una correlaci&oacute;n
+con las f&oacute;rmulas proposicionales. Asimismo, se plantean dos
+formas can&oacute;nicas de las funciones booleanas, que son &uacute;tiles
+para varios prop&oacute;sitos, tales como el de determinar si dos
+expresiones representan o no la misma funci&oacute;n. Pero para otros
+prop&oacute;sitos son a menudo engorrosas, por tener m&aacute;s
+operaciones que las necesarias. Particularmente, cuando estamos
+construyendo los circuitos electr&oacute;nicos con que implementar
+funciones booleanas, el problema de determinar una expresi&oacute;n
+m&iacute;nima para una funci&oacute;n es a menudo crucial. No
+resultan de la misma eficiencia en dinero y tiempo, principalmente,
+dos funciones las cuales calculan lo mismo pero donde una tiene menos
+variables y lo hace en menor tiempo.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Como soluci&oacute;n a este
+problema, se plantea un m&eacute;todo de simplificaci&oacute;n, que
+hace uso de unos diagramas especiales llamados mapas o diagramas de
+Karnaugh, y el cual tiene la limitaci&oacute;n de poder trabajar
+adecuadamente s&oacute;lo con pocas variables.<BR>Se realizan estas
+presentaciones con el fin de demostrar la afinidad existente entre el
+&aacute;lgebra de boole y la l&oacute;gica proposicional, y con el
+objeto de cimentar el procedimiento de simplificaci&oacute;n
+presentado en la l&oacute;gica de proposiciones. </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="algebra de boole"></A><A NAME="2"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Algebra
+			de Boole</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Un &aacute;lgebra de Boole B
+es un conjunto B en el cual se pueden distinguir dos elementos
+notados 0 y 1 y donde dos operaciones binarias notadas ?+ y <B>.</B>
+y una operaci&oacute;n unaria notada &uml;<B>’</B>&uml; verifican
+los siguientes axiomas: <BR>sean x, y, z tres elementos cualesquiera
+de B.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=795 BORDER=0 CELLPADDING=4 CELLSPACING=0>
+		<COL WIDTH=213>
+		<COL WIDTH=566>
+		<TR BGCOLOR="#eeeede" VALIGN=TOP>
+			<TH WIDTH=213>
+				<P><BR>
+				</P>
+			</TH>
+			<TH WIDTH=566>
+				<P><BR>
+				</P>
+			</TH>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213>
+				<UL>
+					<P><A HREF="#2"><FONT FACE="Thorndale"><FONT COLOR="#000000">Conmutatividad</FONT></FONT></A></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566>
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + y = y +
+					x<BR>x . y = y . x</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#d0d0d0" VALIGN=TOP>
+			<TD WIDTH=213 BGCOLOR="#e6e6e6">
+				<UL>
+					<P><A HREF="#3"><FONT FACE="Thorndale"><FONT COLOR="#000000">Asociatividad</FONT></FONT></A></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566 BGCOLOR="#e6e6e6">
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + (y + z) =
+					(x + y) + z<BR>x . (y . z) = (x . y) . z</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213>
+				<UL>
+					<P><A HREF="#4"><FONT FACE="Thorndale"><FONT COLOR="#000000">Idempotencia</FONT></FONT></A></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566>
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + x = x<BR>x
+					. x = x</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#d0d0d0" VALIGN=TOP>
+			<TD WIDTH=213 BGCOLOR="#e6e6e6">
+				<UL>
+					<P><A HREF="#5"><FONT FACE="Thorndale"><FONT COLOR="#000000">Absorci&oacute;n</FONT></FONT></A></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566 BGCOLOR="#e6e6e6">
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + (x . y) =
+					x<BR>x . (x + y) = x</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213>
+				<UL>
+					<P><A HREF="#5"><FONT FACE="Thorndale"><FONT COLOR="#000000">Distributividad
+					doble</FONT></FONT></A></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566>
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x . (y + z) =
+					(x . y) + (x . z)<BR>x + (y . z) = (x + y) . (x + z)</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213 BGCOLOR="#e6e6e6">
+				<UL>
+					<P><FONT FACE="Thorndale"><FONT SIZE=3>Elementos neutros</FONT></FONT></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566 BGCOLOR="#e6e6e6">
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + 0 = x<BR>x
+					. 1 = x </FONT></FONT>
+					</P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213>
+				<UL>
+					<P><FONT FACE="Thorndale"><FONT SIZE=3>Elemento absorbente</FONT></FONT></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566>
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x . 0 = 0<BR>x
+					+ 1 = 1 </FONT></FONT>
+					</P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213 BGCOLOR="#e6e6e6">
+				<UL>
+					<P><FONT FACE="Thorndale"><FONT SIZE=3>Complementaci&oacute;n</FONT></FONT></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566 BGCOLOR="#e6e6e6">
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>x + x’ = 1
+					<BR>x . x’ = 0</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213>
+				<UL>
+					<P><FONT FACE="Thorndale"><FONT SIZE=3>Leyes de De Morgan</FONT></FONT></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566>
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>(x . y)’ =
+					x’ + y’<BR>(x + y)’ = x’ . y’</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+		<TR BGCOLOR="#f0f0f0" VALIGN=TOP>
+			<TD WIDTH=213 BGCOLOR="#e6e6e6">
+				<UL>
+					<P><FONT FACE="Thorndale"><FONT SIZE=3>Inverso</FONT></FONT></P>
+				</UL>
+			</TD>
+			<TD WIDTH=566 BGCOLOR="#e6e6e6">
+				<UL>
+					<P ALIGN=LEFT><FONT FACE="Thorndale"><FONT SIZE=3>0’ = 1<BR>1’
+					= 0</FONT></FONT></P>
+				</UL>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<H2 STYLE="margin-top: 0cm; margin-bottom: 0cm"><BR>
+</H2>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<COL WIDTH=4*>
+	<COL WIDTH=252*>
+	<TR BGCOLOR="#eeeede">
+		<TD WIDTH=2%>
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=98%>
+			<P><A NAME="formas normales"></A><A NAME="3"></A><FONT COLOR="#355e00"><FONT FACE="Thorndale"><FONT SIZE=6>Formas
+			normales</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>En
+el &aacute;lgebra de Boole abstracta se usan denominaciones an&aacute;logas
+a las del &Aacute;lgebra elemental. As&iacute;, un monomio es una
+letra que representa un elemento de B, con o sin tilde de
+complemento, o bien un producto (intersecci&oacute;n) de tales
+s&iacute;mbolos.</FONT></FONT></P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Ejemplos:
+a, b’, a’b (o sea, a’ . b), a . b . ’c; un polinomio es un
+monomio o una uni&oacute;n de monomios (t&eacute;rminos del
+polinomio), </FONT></FONT>
+</P>
+<P STYLE="font-weight: medium"><FONT FACE="Thorndale"><FONT SIZE=3>Ejemplo:
+a’ + b + ab’c t&eacute;rminos a’, b, ab’c.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Una forma lineal es un
+polinomio cuyos t&eacute;rminos se reducen a una sola letra con o sin
+tilde. Ejemplos: a, a’ + b pero no a + b.c, (a + b)’ .</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>Una funci&oacute;n de
+Boole es el resultado de efectuar un n&uacute;mero finito de veces
+operaciones de Boole sobre constantes a, b, ... (elementos
+determinados de B) y variables o indeterminadas x, y, ... (elementos
+gen&eacute;ricos, indeterminados o arbitrarios de B, pero siempre el
+mismo siempre que aparezca una misma variable).</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>A causa de las relaciones
+que existen entre las operaciones, es posible que una funci&oacute;n
+booleana tome muchas formas. Por ejemplo, si f(x,y) = x’y’ y
+g(x,y) = (x+y)’, entonces, por las leyes de De Morgan sabemos que f
+y g son la misma funci&oacute;n; es decir, toman id&eacute;nticos
+valores para valores id&eacute;nticos de las variables. As&iacute;
+pues, para determinar mejor si dos expresiones representan o no la
+misma funci&oacute;n booleana, es deseable tener una forma can&oacute;nica
+est&aacute;ndar en que podamos expresar las distintas funciones. Por
+tal motivo, ofrecen especial inter&eacute;s las funciones (duales)
+siguientes:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Definici&oacute;n: </FONT></FONT>
+</P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>Una
+		funci&oacute;n de Boole se llama forma normal disyuntiva o
+		polinomio normal en n variables x<SUB>1</SUB>, x<SUB>2</SUB>, ... ,
+		x<SUB>n</SUB> (n&gt;0) si es una de las constantes 0, o bien un
+		polinomio en cada uno de cuyos t&eacute;rminos figuran las n
+		variables x<SUB>i</SUB> y ninguna otra letra (y en particular, no
+		hay constantes); y cada uno de los t&eacute;rminos es &uacute;nico.
+		Ejemplos: x +y’ , x’y + xy’ . </FONT></FONT>
+		</P>
+	</UL>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<UL>
+	<UL>
+		<LI><P><FONT FACE="Thorndale"><FONT SIZE=3>Una funci&oacute;n de
+		Boole se llama forma normal conjuntiva o producto normal en n
+		variables x<SUB>1</SUB>, x<SUB>2</SUB>, ... , x<SUB>n</SUB> (n&gt;0)
+		si es una de las constantes 0 , o bien una forma lineal o un
+		producto de formas lineales en cada uno de cuyos factores figuran
+		las n variables x<SUB>i</SUB> y ninguna otra letra (y en
+		particular, no hay constantes); y cada uno de los t&eacute;rminos
+		es &uacute;nico. Ejemplos: xy’, (x’ + y) . (x + y’).</FONT></FONT></P>
+	</UL>
+</UL>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Teorema:</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>Toda funci&oacute;n de
+Boole f(x<SUB>1</SUB>, x<SUB>2</SUB>, ... , x<SUB>n</SUB>), sin
+constantes, se reducir&aacute; a una</FONT></FONT></P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>forma
+		normal disyuntiva o polinomio normal o bien, a una </FONT></FONT>
+		</P>
+		<LI><P><FONT FACE="Thorndale"><FONT SIZE=3>forma normal conjuntiva
+		o producto normal. </FONT></FONT>
+		</P>
+	</UL>
+</UL>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Una funci&oacute;n de Boole en
+forma normal conjuntiva (o disyuntiva) en n variables, puede contener
+hasta 2<SUP>n</SUP> t&eacute;rminos (o factores), pues en cada uno,
+cada letra x<SUB>k</SUB> puede aparecer en dos formas, x<SUB>k</SUB>
+o x<SUB>k</SUB>’ . Si contiene los 2<SUP>n</SUP> se llama
+completa.<BR>Es inmediato el siguiente </FONT></FONT>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>teorema:</FONT></FONT></P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Thorndale"><FONT SIZE=3>La
+		forma normal completa disyuntiva en n variables x<SUB>1</SUB>, x<SUB>2</SUB>,
+		...,x<SUB>n</SUB> resulta desarrollando (x<SUB>1 </SUB>+ x<SUB>1</SUB>’).
+		... .(x<SUB>n</SUB> + x<SUB>n</SUB>’) = 1 y para cada sistema de
+		reemplazos de las variables x<SUB>1</SUB>, x<SUB>2</SUB>, ...,x<SUB>n</SUB>
+		por las constantes 0 y 1, uno y uno s&oacute;lo de los t&eacute;rminos
+		da 1 y los dem&aacute;s 0. </FONT></FONT>
+		</P>
+		<LI><P><FONT FACE="Thorndale"><FONT SIZE=3>La forma normal completa
+		conjuntiva en n variables x<SUB>1</SUB>, x<SUB>2</SUB>, ...,x<SUB>n</SUB>
+		resulta desarrollando (x<SUB>1</SUB> . x<SUB>1</SUB>’)+ ... +(x<SUB>n</SUB>
+		. x<SUB>n</SUB>’) = 0 y para cada sistema de reemplazos de las
+		variables x<SUB>1</SUB>, x<SUB>2</SUB>, ...,x<SUB>n</SUB> por las
+		constantes 0 y 1, uno y uno s&oacute;lo de los factores da 0 y los
+		dem&aacute;s 1.</FONT></FONT></P>
+	</UL>
+</UL>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Por ejemplo, en la forma
+normal disyuntiva completa en x, y, z, el reemplazo de <BR>x = z = 1,
+y = 0 , reduce a 1 el t&eacute;rmino xy’z, y a 0 los 7 restantes.<BR></FONT></FONT><BR><BR>
+</P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>De aqu&iacute; resulta el
+siguiente</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Teorema:<BR>Dos funciones de
+Boole son iguales si y s&oacute;lo si coinciden sus respectivas
+formas normales de igual clase, y tambi&eacute;n si y s&oacute;lo si
+coinciden para todo sistema de reemplazos de las variables por 0 y 1.</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3>Aplicaci&oacute;n al c&aacute;lculo
+proposicional</FONT></FONT></P>
+<P><FONT FACE="Thorndale"><FONT SIZE=3><BR>Si en el &aacute;lgebra de
+enunciados se interpretan todas las equivalencias como igualdades,
+entonces el &aacute;lgebra de enunciados pasa a ser un &aacute;lgebra
+de Boole.</FONT></FONT></P>
+<HR>
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0>
+		<COL WIDTH=163*>
+		<COL WIDTH=3*>
+		<COL WIDTH=90*>
+		<TR>
+			<TD WIDTH=64%>
+				<P>Copyright &copy; 2003 <A HREF="mailto:steel_edward.vazquez@aldea.iberopuebla.net?subject=QLogico">Steel
+				E. V. George</A></P>
+			</TD>
+			<TD WIDTH=1%></TD>
+			<TD WIDTH=35%>
+				<P ALIGN=RIGHT><A HREF="http://qlogico.sourceforge.net/">QLogico
+				version 1.0</A></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>
